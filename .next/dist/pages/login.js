@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
@@ -35,22 +35,22 @@ var _Head2 = _interopRequireDefault(_Head);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _class = function (_React$Component) {
-  (0, _inherits3.default)(_class, _React$Component);
+	(0, _inherits3.default)(_class, _React$Component);
 
-  function _class() {
-    (0, _classCallCheck3.default)(this, _class);
+	function _class() {
+		(0, _classCallCheck3.default)(this, _class);
 
-    return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).apply(this, arguments));
-  }
+		return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).apply(this, arguments));
+	}
 
-  (0, _createClass3.default)(_class, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement("div", { className: "container" }, _react2.default.createElement("h1", null, "Login Information")));
-    }
-  }]);
+	(0, _createClass3.default)(_class, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement("div", { className: "login-container" }, _react2.default.createElement(_Head2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("form", { action: "index.html" }, _react2.default.createElement("div", { className: "panel panel-body login-form" }, _react2.default.createElement("div", { className: "text-center" }, _react2.default.createElement("div", { className: "icon-object border-slate-300 text-slate-300" }, _react2.default.createElement("img", { width: "100", height: "80", src: "static/assets/images/logo-1.jpg" })), _react2.default.createElement("h5", { className: "content-group" }, "Login to your account ", _react2.default.createElement("small", { className: "display-block" }, "Enter your mobile number below"))), _react2.default.createElement("div", { className: "form-group has-feedback has-feedback-left" }, _react2.default.createElement("input", { type: "text", className: "form-control", placeholder: "Mobile Number" }), _react2.default.createElement("div", { className: "form-control-feedback" }, _react2.default.createElement("i", { className: "icon-user text-muted" }))), _react2.default.createElement("div", { className: "form-group has-feedback has-feedback-left" }, _react2.default.createElement("input", { type: "password", className: "form-control", placeholder: "Passcode" }), _react2.default.createElement("div", { className: "form-control-feedback" }, _react2.default.createElement("i", { className: "icon-lock2 text-muted" }))), _react2.default.createElement("div", { className: "form-group" }, _react2.default.createElement("button", { type: "submit", className: "btn bg-pink-400 btn-block" }, "Sign in ", _react2.default.createElement("i", { className: "icon-circle-right2 position-right" }))), _react2.default.createElement("div", { className: "text-center" }, _react2.default.createElement("a", { href: "login_password_recover.html" }, "Forgot password?")))), _react2.default.createElement("div", { className: "footer text-muted text-center" }, "\xA9 2017. ", _react2.default.createElement("a", { href: "#" }, "School Management Portal"), " by ", _react2.default.createElement("a", { href: "http://www.cichub.org", target: "_blank" }, "CIC HUB")))))));
+		}
+	}]);
 
-  return _class;
+	return _class;
 }(_react2.default.Component);
 
 exports.default = _class;
