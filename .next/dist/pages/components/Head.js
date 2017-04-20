@@ -28,6 +28,10 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _head = require("next\\dist\\lib\\head.js");
+
+var _head2 = _interopRequireDefault(_head);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _class = function (_React$Component) {
@@ -42,7 +46,7 @@ var _class = function (_React$Component) {
   (0, _createClass3.default)(_class, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("h1", null, "Hello World");
+      return _react2.default.createElement(_head2.default, null, _react2.default.createElement("link", { href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel: "stylesheet" }), _react2.default.createElement("script", { src: "https://code.jquery.com/jquery-3.2.1.min.js", type: "text/javascript" }), _react2.default.createElement("script", { src: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type: "text/javascript" }));
     }
   }]);
 

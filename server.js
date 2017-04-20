@@ -1,5 +1,6 @@
 const express = require('express')
 const next = require('next')
+const bodyParser = require('body-parser')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -11,6 +12,10 @@ app.prepare()
 
   server.get('/', (req, res) => {
     return app.render(req, res, '/index', req.query)
+  })
+
+  server.get('/login', (req,res) => {
+    return app.render(req,res, '/login', req.query);
   })
 
   server.get('*', (req, res) => {
