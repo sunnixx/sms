@@ -1,21 +1,22 @@
 import React from "react";
 import Head from "./components/Head";
+import TopMenu from "./components/TopMenu";
+import Sidebar from "./components/Sidebar";
 
 export default class extends React.Component{
   render(){
     return(
       <div>
         <Head></Head>
-        <header>
-          <h1>This is the header</h1>
-        </header>
-        <div className='container'>
-          <h1>This is the container</h1>
+        <TopMenu></TopMenu>
+        <div className='page-container'>
+          <div className="page-content">
+            <Sidebar></Sidebar>
+            <h1>THIS AREA IS FOR THE MAIN CONTENT OF THE PAGE</h1>
+          </div>
         </div>
-        <footer>
-          <h1>This is the footer</h1>
-        </footer>
       </div>
+
     )
   }
 }

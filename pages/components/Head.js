@@ -26,6 +26,7 @@ export default class extends React.Component{
         	<script type="text/javascript" src="static/assets/js/core/app.js"></script>
 
         	<script type="text/javascript" src="static/assets/js/plugins/ui/ripple.min.js"></script>
+          <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
         </div>
       </Head>
     )

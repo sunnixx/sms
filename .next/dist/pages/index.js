@@ -32,6 +32,14 @@ var _Head = require("./components/Head");
 
 var _Head2 = _interopRequireDefault(_Head);
 
+var _TopMenu = require("./components/TopMenu");
+
+var _TopMenu2 = _interopRequireDefault(_TopMenu);
+
+var _Sidebar = require("./components/Sidebar");
+
+var _Sidebar2 = _interopRequireDefault(_Sidebar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _class = function (_React$Component) {
@@ -46,7 +54,7 @@ var _class = function (_React$Component) {
   (0, _createClass3.default)(_class, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement("header", null, _react2.default.createElement("h1", null, "This is the header")), _react2.default.createElement("div", { className: "container" }, _react2.default.createElement("h1", null, "This is the container")), _react2.default.createElement("footer", null, _react2.default.createElement("h1", null, "This is the footer")));
+      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, null), _react2.default.createElement("h1", null, "THIS AREA IS FOR THE MAIN CONTENT OF THE PAGE"))));
     }
   }]);
 
