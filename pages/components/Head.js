@@ -5,7 +5,6 @@ export default class extends React.Component{
   render(){
     return(
       <Head>
-        <div>
           <meta charset="utf-8"  />
         	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
         	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,7 +26,6 @@ export default class extends React.Component{
 
         	<script type="text/javascript" src="static/assets/js/plugins/ui/ripple.min.js"></script>
           <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
-        </div>
       </Head>
     )
   }

@@ -38,7 +38,11 @@ app.prepare()
   server.use(passport.session())
 
   server.get('/', (req, res) => {
-    return app.render(req, res, '/index', req.query)
+    if(req.user){
+      return app.render(req, res, '/index', req.query)
+    }else{
+      res.redirect('/login');
+    }
   })
 
   server.get('/login', (req,res) => {
