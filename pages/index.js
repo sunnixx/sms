@@ -62,12 +62,12 @@ export default class extends React.Component{
                   <div className="col-md-4" >
                     <div className="panel panel-info">
                       <div className="panel-heading">
-                        <h6 className="panel-title">FINANCE</h6>
+                        <h6 className="panel-title">ACADEMICS</h6>
                       </div>
                       <Link href="#">
                         <a>
                           <div className="panel-body panel-body-dashboard" style={{display: "block"}}>
-                            <img src='static/assets/images/icons/finance.png' className="center-block img-responsive" style={{height:"150px"}} />
+                            <img src='static/assets/images/icons/academics.png' className="center-block img-responsive" style={{height:"150px"}} />
                           </div>
                         </a>
                       </Link>
@@ -84,46 +84,12 @@ export default class extends React.Component{
                   <div className="col-md-4" >
                     <div className="panel panel-info">
                       <div className="panel-heading">
-                        <h6 className="panel-title">FINANCE</h6>
+                        <h6 className="panel-title">HEALTH</h6>
                       </div>
                       <Link href="#">
                         <a>
                           <div className="panel-body panel-body-dashboard" style={{display: "block"}}>
-                            <img src='static/assets/images/icons/finance.png' className="center-block img-responsive" style={{height:"150px"}} />
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                  {/* COLUMN ENDS */}
-
-                  {/* COLUMN STARTS */}
-                  <div className="col-md-4" >
-                    <div className="panel panel-info">
-                      <div className="panel-heading">
-                        <h6 className="panel-title">FINANCE</h6>
-                      </div>
-                      <Link href="#">
-                        <a>
-                          <div className="panel-body panel-body-dashboard" style={{display: "block"}}>
-                            <img src='static/assets/images/icons/finance.png' className="center-block img-responsive" style={{height:"150px"}} />
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                  {/* COLUMN ENDS */}
-
-                  {/* COLUMN STARTS */}
-                  <div className="col-md-4" >
-                    <div className="panel panel-info">
-                      <div className="panel-heading">
-                        <h6 className="panel-title">FINANCE</h6>
-                      </div>
-                      <Link href="#">
-                        <a>
-                          <div className="panel-body panel-body-dashboard" style={{display: "block"}}>
-                            <img src='static/assets/images/icons/finance.png' className="center-block img-responsive" style={{height:"150px"}} />
+                            <img src='static/assets/images/icons/health.png' className="center-block img-responsive" style={{height:"150px"}} />
                           </div>
                         </a>
                       </Link>

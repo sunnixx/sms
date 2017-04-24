@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const passportConf = require('./config/passport')
 const MongoStore = require('connect-mongo')(session)
 const secret = require('./config/secret')
+const User = require('./models/user')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -53,8 +54,33 @@ app.prepare()
     res.redirect('/')
   })
 
+  server.get('/signup', (req,res) => {
+    return app.render(req,res, '/signup', req.query);
+  })
+
+  server.post('/signup', (req,res) => {
+    var user = new User();
+
+    user.username = req.body.username;
+    user.password = req.body.password;
+    user.email = req.body.email;
+
+    User.findOne({email:req.body.email}, function(err,existingUser,done){
+      if(err){return done(err)}
+      if(existingUser){
+        res.redirect('/signup');
+      }else{
+        user.save(function(err,user){
+          if(err) return done(err)
+          res.redirect('/login');
+        })
+      }
+    })
+  })
+
   server.get('/logout', (req,res) => {
     req.logout();
+    res.redirect('/login');
   })
 
   server.get('*', (req, res) => {

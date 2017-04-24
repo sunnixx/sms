@@ -25,7 +25,7 @@ export default class extends React.Component{
 							<ul className="navigation">
 								<li><a href="#" className="legitRipple"><i className="icon-user-plus"></i> <span>My profile</span></a></li>
 								<li><a href="#" className="legitRipple"><i className="icon-cog5"></i> <span>Account settings</span></a></li>
-								<li><a href="#" className="legitRipple"><i className="icon-switch2"></i> <span>Logout</span></a></li>
+								<li><Link href="/logout"><a className="legitRipple"><i className="icon-switch2"></i> <span>Logout</span></a></Link></li>
 							</ul>
 						</div>
 					</div>
@@ -38,33 +38,27 @@ export default class extends React.Component{
 								<li className="navigation-header"><span>Main</span> <i className="icon-menu" title="" data-original-title="Main pages"></i></li>
 								<li className="active"><a href="index.html" className="legitRipple"><i className="icon-home4"></i> <span>Dashboard</span></a></li>
 								<li className="">
-									<a href="#" className="has-ul legitRipple"><i className="icon-stack"></i> <span>Challans</span></a>
+									<a href="#" className="has-ul legitRipple"><i className="icon-stats-growth"></i> <span>Finance</span></a>
 									<ul className="hidden-ul" style={{display: "none"}}>
-										<li><a href="starters/horizontal_nav.html" className="legitRipple">Horizontal navigation</a></li>
-										<li><a href="starters/1_col.html" className="legitRipple">1 column</a></li>
-										<li><a href="starters/2_col.html" className="legitRipple">2 columns</a></li>
-										<li>
-											<a href="#" className="has-ul legitRipple">3 columns</a>
-											<ul className="hidden-ul">
-												<li><a href="starters/3_col_dual.html" className="legitRipple">Dual sidebars</a></li>
-												<li><a href="starters/3_col_double.html" className="legitRipple">Double sidebars</a></li>
-											</ul>
-										</li>
-										<li><a href="starters/4_col.html" className="legitRipple">4 columns</a></li>
-										<li>
-											<a href="#" className="has-ul legitRipple">Detached layout</a>
-											<ul className="hidden-ul">
-												<li><a href="starters/detached_left.html" className="legitRipple">Left sidebar</a></li>
-												<li><a href="starters/detached_right.html" className="legitRipple">Right sidebar</a></li>
-												<li><a href="starters/detached_sticky.html" className="legitRipple">Sticky sidebar</a></li>
-											</ul>
-										</li>
-										<li><a href="starters/layout_boxed.html" className="legitRipple">Boxed layout</a></li>
-										<li className="navigation-divider"></li>
-										<li><a href="starters/layout_navbar_fixed_main.html" className="legitRipple">Fixed main navbar</a></li>
-										<li><a href="starters/layout_navbar_fixed_secondary.html" className="legitRipple">Fixed secondary navbar</a></li>
-										<li><a href="starters/layout_navbar_fixed_both.html" className="legitRipple">Both navbars fixed</a></li>
-										<li><a href="starters/layout_fixed.html" className="legitRipple">Fixed layout</a></li>
+										<li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li>
+									</ul>
+								</li>
+                <li className="">
+									<a href="#" className="has-ul legitRipple"><i className="icon-reading"></i> <span>Admissions</span></a>
+									<ul className="hidden-ul" style={{display: "none"}}>
+										{/* <li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li> */}
+									</ul>
+								</li>
+                <li className="">
+									<a href="#" className="has-ul legitRipple"><i className="icon-graduation"></i> <span>Academics</span></a>
+									<ul className="hidden-ul" style={{display: "none"}}>
+										{/* <li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li> */}
+									</ul>
+								</li>
+                <li className="">
+									<a href="#" className="has-ul legitRipple"><i className="icon-heart5"></i> <span>Health</span></a>
+									<ul className="hidden-ul" style={{display: "none"}}>
+										{/* <li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li> */}
 									</ul>
 								</li>
 							</ul>
