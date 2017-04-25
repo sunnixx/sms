@@ -36,26 +36,26 @@ export default class extends React.Component{
 
 
 								<li className="navigation-header"><span>Main</span> <i className="icon-menu" title="" data-original-title="Main pages"></i></li>
-								<li className="active"><a href="index.html" className="legitRipple"><i className="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li className="">
-									<a href="#" className="has-ul legitRipple"><i className="icon-stats-growth"></i> <span>Finance</span></a>
-									<ul className="hidden-ul" style={{display: "none"}}>
-										<li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li>
+								<li className={this.props.dashboardActive}><Link href='/'><a className="legitRipple"><i className="icon-home4"></i> <span>Dashboard</span></a></Link></li>
+								<li className={this.props.financeActive}>
+									<Link href='/finance'><a className="has-ul legitRipple"><i className="icon-stats-growth"></i> <span>Finance</span></a></Link>
+									<ul className="hidden-ul" style={{display: this.props.challanShow}}>
+										<li className={this.props.challanActive}><Link href='/finance'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li>
 									</ul>
 								</li>
-                <li className="">
+                <li className={this.props.admissionsActive}>
 									<a href="#" className="has-ul legitRipple"><i className="icon-reading"></i> <span>Admissions</span></a>
 									<ul className="hidden-ul" style={{display: "none"}}>
 										{/* <li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li> */}
 									</ul>
 								</li>
-                <li className="">
+                <li className={this.props.academicsActive}>
 									<a href="#" className="has-ul legitRipple"><i className="icon-graduation"></i> <span>Academics</span></a>
 									<ul className="hidden-ul" style={{display: "none"}}>
 										{/* <li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li> */}
 									</ul>
 								</li>
-                <li className="">
+                <li className={this.props.healthActive}>
 									<a href="#" className="has-ul legitRipple"><i className="icon-heart5"></i> <span>Health</span></a>
 									<ul className="hidden-ul" style={{display: "none"}}>
 										{/* <li><Link href='/finance_challan'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li> */}

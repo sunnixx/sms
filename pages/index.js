@@ -13,7 +13,7 @@ export default class extends React.Component{
         <TopMenu></TopMenu>
         <div className='page-container'>
           <div className="page-content">
-            <Sidebar></Sidebar>
+            <Sidebar dashboardActive="active"></Sidebar>
 
             {/* CONTENT WRAPPER STARTS */}
             <div className="content-wrapper">
@@ -30,7 +30,7 @@ export default class extends React.Component{
                       <div className="panel-heading">
                         <h6 className="panel-title">FINANCE</h6>
                       </div>
-                      <Link href="#">
+                      <Link href="/finance">
                         <a>
                           <div className="panel-body panel-body-dashboard" style={{display: "block"}}>
                             <img src='static/assets/images/icons/finance.png' className="center-block img-responsive" style={{height:"150px"}} />

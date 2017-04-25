@@ -78,6 +78,14 @@ app.prepare()
     })
   })
 
+  server.get('/finance', (req,res) => {
+    if(req.user){
+      return app.render(req, res, '/finance', req.query)
+    }else{
+      res.redirect('/login');
+    }
+  })
+
   server.get('/logout', (req,res) => {
     req.logout();
     res.redirect('/login');
