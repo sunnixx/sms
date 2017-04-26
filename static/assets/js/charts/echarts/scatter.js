@@ -16,7 +16,7 @@ $(function () {
 
     require.config({
         paths: {
-            echarts: 'assets/js/plugins/visualization/echarts'
+            echarts: 'static/assets/js/plugins/visualization/echarts'
         }
     });
 
@@ -50,7 +50,7 @@ $(function () {
 
 
             // Charts setup
-            // ------------------------------                    
+            // ------------------------------
 
             //
             // Basic scatter chart options
@@ -73,7 +73,7 @@ $(function () {
                     formatter: function (params) {
                         if (params.value.length > 1) {
                             return params.seriesName + ':<br/>'
-                            + params.value[0] + 'cm ' 
+                            + params.value[0] + 'cm '
                             + params.value[1] + 'kg ';
                         }
                         else {
@@ -81,7 +81,7 @@ $(function () {
                             + params.name + ': '
                             + params.value + 'kg ';
                         }
-                    },  
+                    },
                     axisPointer: {
                         show: true,
                         type: 'cross',
@@ -691,8 +691,8 @@ $(function () {
                             trigger: 'item',
                             formatter: function (params) {
                                 return params.seriesName + ' （'  + 'Category' + params.value[0] + '）<br/>'
-                                + params.value[1] + ', ' 
-                                + params.value[2]; 
+                                + params.value[1] + ', '
+                                + params.value[2];
                             },
                             axisPointer: {
                                 show: true
@@ -723,8 +723,8 @@ $(function () {
                             trigger: 'item',
                             formatter: function (params) {
                                 return params.seriesName + ' （'  + 'Category' + params.value[0] + '）<br/>'
-                                + params.value[1] + ', ' 
-                                + params.value[2]; 
+                                + params.value[1] + ', '
+                                + params.value[2];
                             },
                             axisPointer:{
                                 show: true
@@ -822,7 +822,7 @@ $(function () {
                             trigger: 'axis',
                             formatter: function (params) {
                                 var date = new Date(params.value[0]);
-                                return params.seriesName 
+                                return params.seriesName
                                 + ' （'
                                 + date.getFullYear() + '-'
                                 + (date.getMonth() + 1) + '-'
@@ -830,7 +830,7 @@ $(function () {
                                 + date.getHours() + ':'
                                 + date.getMinutes()
                                 +  '）<br/>'
-                                + params.value[1] + ', ' 
+                                + params.value[1] + ', '
                                 + params.value[2];
                             },
                             axisPointer: {

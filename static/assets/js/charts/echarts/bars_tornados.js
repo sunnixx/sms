@@ -16,7 +16,7 @@ $(function () {
 
     require.config({
         paths: {
-            echarts: 'assets/js/plugins/visualization/echarts'
+            echarts: 'static/assets/js/plugins/visualization/echarts'
         }
     });
 
@@ -477,7 +477,7 @@ $(function () {
                     color: 'rgba(0,0,0,0)'
                 }
             };
-            var dataStyle = { 
+            var dataStyle = {
                 normal: {
                     label: {
                         show: true,
@@ -620,7 +620,7 @@ $(function () {
                     },
                     formatter: function (params) {
                         return params.seriesName + ': [ '
-                        + params.value[0] + ', ' 
+                        + params.value[0] + ', '
                         + params.value[1] + ' ]';
                     }
                 },
@@ -918,7 +918,7 @@ $(function () {
                             {value: -680, itemStyle: labelRight},
                             {value: -300, itemStyle: labelRight},
                             690,
-                            900, 
+                            900,
                             {value: -390, itemStyle: labelRight},
                             600,
                             {value: -120, itemStyle: labelRight},

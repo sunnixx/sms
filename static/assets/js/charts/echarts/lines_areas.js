@@ -17,7 +17,7 @@ $(function() {
 
     require.config({
         paths: {
-            echarts: 'assets/js/plugins/visualization/echarts'
+            echarts: 'static/assets/js/plugins/visualization/echarts'
         }
     });
 
@@ -304,7 +304,7 @@ $(function() {
                     },
                     formatter: function (params) {
                         return params.seriesName + ': [ '
-                        + params.value[0] + ', ' 
+                        + params.value[0] + ', '
                         + params.value[1] + ' ]';
                     }
                 },
@@ -522,7 +522,7 @@ $(function() {
                 // Enable drag recalculate
                 calculable: true,
 
-                // Add horizontal axis 
+                // Add horizontal axis
                 xAxis: [{
                     type: 'category',
                     boundaryGap: false,

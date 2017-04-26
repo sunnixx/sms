@@ -16,7 +16,7 @@ $(function () {
 
     require.config({
         paths: {
-            echarts: 'assets/js/plugins/visualization/echarts'
+            echarts: 'static/assets/js/plugins/visualization/echarts'
         }
     });
 
@@ -56,7 +56,7 @@ $(function () {
 
 
             // Charts setup
-            // ------------------------------                    
+            // ------------------------------
 
             //
             // Basic funnel options

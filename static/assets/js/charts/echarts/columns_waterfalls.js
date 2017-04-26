@@ -16,7 +16,7 @@ $(function () {
 
     require.config({
         paths: {
-            echarts: 'assets/js/plugins/visualization/echarts'
+            echarts: 'static/assets/js/plugins/visualization/echarts'
         }
     });
 
@@ -386,7 +386,7 @@ $(function () {
                                 barBorderWidth: 6,
                                 barBorderRadius: 0,
                                 label: {
-                                    show: true, 
+                                    show: true,
                                     position: 'top',
                                     formatter: function (params) {
                                         for (var i = 0, l = thermometer_columns_options.xAxis[0].data.length; i < l; i++) {
@@ -625,7 +625,7 @@ $(function () {
                         toolbox: {
                             show: true,
                             orient: 'vertical',
-                            x: 'right', 
+                            x: 'right',
                             y: 70,
                             feature: {
                                 mark: {
