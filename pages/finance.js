@@ -10,7 +10,7 @@ export default class extends React.Component{
   render(){
     return(
       <div>
-        <Head echartsSrc="static/assets/js/plugins/visualization/echarts/echarts.js" pieChartSrc="static/assets/js/charts/echarts/pies_donuts.js"></Head>
+        <Head datatablebasic="static/assets/js/pages/datatables_basic.js" select="static/assets/js/plugins/forms/selects/select2.min.js" datatable="static/assets/js/plugins/tables/datatables/datatables.min.js" echartsSrc="static/assets/js/plugins/visualization/echarts/echarts.js" pieChartSrc="static/assets/js/charts/echarts/pies_donuts.js"></Head>
         <TopMenu></TopMenu>
         <div className="page-container">
           <div className="page-content">
