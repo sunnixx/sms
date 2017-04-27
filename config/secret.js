@@ -1,5 +1,5 @@
 module.exports = {
-  database:'mongodb://iiuisl:Qz7pCLvXFYj4rr12KFVqpQQvmt3vMWoQ6kC0XrMHldbKSCbFcWq6kGiE01IHcS1P0nRuxz5ASzGu3TgQpXJ8tg==@iiuisl.documents.azure.com:10250/?ssl=true',
+  database:'mongodb://admin:FasT1234@ds062339.mlab.com:62339/iiuisl',
   key: 'iiuisl',
   port: 3000
 }

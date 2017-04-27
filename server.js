@@ -86,6 +86,18 @@ app.prepare()
     }
   })
 
+  server.get('/addstudent', (req,res) => {
+    if(req.user){
+      return app.render(req,res, '/addchallan', req.query)
+    }else{
+      res.redirect('/login')
+    }
+  })
+
+  server.post('/addstudent', (req,res) => {
+
+  })
+
   server.get('/logout', (req,res) => {
     req.logout();
     res.redirect('/login');

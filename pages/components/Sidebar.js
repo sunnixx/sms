@@ -41,6 +41,7 @@ export default class extends React.Component{
 									<Link href='/finance'><a className="has-ul legitRipple"><i className="icon-stats-growth"></i> <span>Finance</span></a></Link>
 									<ul className="hidden-ul" style={{display: this.props.challanShow}}>
 										<li className={this.props.challanActive}><Link href='/finance'><a className="legitRipple"><i className="icon-stack"></i>Challans</a></Link></li>
+                    <li className={this.props.addStudentActive}><Link href='/addchallan'><a className="legitRipple"><i className="icon-plus"></i>Add Challan</a></Link></li>
 									</ul>
 								</li>
                 <li className={this.props.admissionsActive}>

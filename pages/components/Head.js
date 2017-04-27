@@ -22,10 +22,7 @@ export default class extends React.Component{
         	<script type="text/javascript" src="static/assets/js/core/libraries/bootstrap.min.js"></script>
         	<script type="text/javascript" src="static/assets/js/plugins/loaders/blockui.min.js"></script>
 
-
-          <script type="text/javascript" src={this.props.echartsSrc}></script>
           <script type="text/javascript" src="static/assets/js/core/app.js"></script>
-          <script type="text/javascript" src={this.props.pieChartSrc}></script>
           <script type="text/javascript" src="static/assets/js/plugins/ui/ripple.min.js"></script>
       </Head>
     )
