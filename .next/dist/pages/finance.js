@@ -40,6 +40,10 @@ var _echartsForReact = require("echarts-for-react");
 
 var _echartsForReact2 = _interopRequireDefault(_echartsForReact);
 
+var _jquery = require("jquery");
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _Sidebar = require("./components/Sidebar");
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
@@ -67,7 +71,7 @@ var _class = function (_React$Component) {
         // Add title
         title: {
           text: 'Challan Overview',
-          subtext: 'Shows number of challans collected vs remaining',
+          subtext: 'Shows Challan stats',
           x: 'center'
         },
 
@@ -142,12 +146,111 @@ var _class = function (_React$Component) {
       return basic_pie_options;
     }
   }, {
+    key: "getAmountOptions",
+    value: function getAmountOptions() {
+      var basic_pie_options = {
+
+        // Add title
+        title: {
+          text: 'Amount Overview',
+          subtext: 'Shows amount collection stats',
+          x: 'center'
+        },
+
+        // Add tooltip
+        tooltip: {
+          trigger: 'item',
+          formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+
+        // Add legend
+        legend: {
+          orient: 'vertical',
+          x: 'left',
+          data: ['Collected', 'Remaining']
+        },
+
+        // Display toolbox
+        toolbox: {
+          show: true,
+          orient: 'vertical',
+          feature: {
+            mark: {
+              show: true,
+              title: {
+                mark: 'Markline switch',
+                markUndo: 'Undo markline',
+                markClear: 'Clear markline'
+              }
+            },
+            magicType: {
+              show: true,
+              title: {
+                pie: 'Switch to pies',
+                funnel: 'Switch to funnel'
+              },
+              type: ['pie', 'funnel'],
+              option: {
+                funnel: {
+                  x: '25%',
+                  y: '20%',
+                  width: '50%',
+                  height: '70%',
+                  funnelAlign: 'left',
+                  max: 1548
+                }
+              }
+            },
+            restore: {
+              show: true,
+              title: 'Restore'
+            },
+            saveAsImage: {
+              show: true,
+              title: 'Same as image',
+              lang: ['Save']
+            }
+          }
+        },
+
+        // Enable drag recalculate
+        calculable: true,
+
+        // Add series
+        series: [{
+          name: 'PKR Amount',
+          type: 'pie',
+          radius: '70%',
+          center: ['50%', '57.5%'],
+          data: [{ value: 120000, name: 'Remaining' }, { value: 100000, name: 'Collected' }]
+        }]
+      };
+      return basic_pie_options;
+    }
+  }, {
+    key: "getAllStudents",
+    value: function getAllStudents() {
+      var _this2 = this;
+
+      _jquery2.default.get('/allstudents', function (response) {
+        _this2.setState({ data: response });
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.getAllStudents();
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, { financeActive: "active", challanShow: "block", challanActive: "active" }), _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "row" }, _react2.default.createElement("div", { className: "col-md-12" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_echartsForReact2.default, {
+      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, { financeActive: "active", challanShow: "block", challanActive: "active" }), _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "row" }, _react2.default.createElement("div", { className: "col-md-6" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_echartsForReact2.default, {
         option: this.getOptions(),
         style: { height: '350px', width: '100%' },
-        className: "react_for_echarts" })))))), _react2.default.createElement("div", { className: "col-md-12" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-heading" }, _react2.default.createElement("h5", { className: "panel-title" }, "Students information regarding Challan")), _react2.default.createElement("table", { className: "table datatable-basic" }, _react2.default.createElement("thead", null, _react2.default.createElement("tr", null, _react2.default.createElement("th", null, "First Name"), _react2.default.createElement("th", null, "Last Name"), _react2.default.createElement("th", null, "Guardian's Name"), _react2.default.createElement("th", null, "DOB"), _react2.default.createElement("th", null, "Status"), _react2.default.createElement("th", { className: "text-center" }, "Actions"))), _react2.default.createElement("tbody", null, _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Marth"), _react2.default.createElement("td", null, "Enright"), _react2.default.createElement("td", null, "Mr. Asad Channa"), _react2.default.createElement("td", null, "22 Jun 1972"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-success" }, "Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan"))))))), _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Jackelyn"), _react2.default.createElement("td", null, "Weible"), _react2.default.createElement("td", null, _react2.default.createElement("a", { href: "#" }, "Mr. Norullah Baloch")), _react2.default.createElement("td", null, "3 Oct 1981"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-danger" }, "Not Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan")))))))))))))));
+        className: "react_for_echarts" })))), _react2.default.createElement("div", { className: "col-md-6" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_echartsForReact2.default, {
+        option: this.getAmountOptions(),
+        style: { height: '350px', width: '100%' },
+        className: "react_for_echarts" })))))), _react2.default.createElement("div", { className: "col-md-12" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-heading" }, _react2.default.createElement("h5", { className: "panel-title" }, "Students information regarding Challan")), _react2.default.createElement("table", { className: "table datatable-basic" }, _react2.default.createElement("thead", null, _react2.default.createElement("tr", null, _react2.default.createElement("th", null, "First Name"), _react2.default.createElement("th", null, "Last Name"), _react2.default.createElement("th", null, "Guardian's Name"), _react2.default.createElement("th", null, "DOB"), _react2.default.createElement("th", null, "Status"), _react2.default.createElement("th", { className: "text-center" }, "Actions"))), _react2.default.createElement("tbody", null, _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Zahid"), _react2.default.createElement("td", null, "Enright"), _react2.default.createElement("td", null, "Mr. Asad Channa"), _react2.default.createElement("td", null, "22 Jun 1972"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-success" }, "Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan"))))))), _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Jackelyn"), _react2.default.createElement("td", null, "Weible"), _react2.default.createElement("td", null, _react2.default.createElement("a", { href: "#" }, "Mr. Norullah Baloch")), _react2.default.createElement("td", null, "3 Oct 1981"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-danger" }, "Not Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan")))))))))))))));
     }
   }]);
 

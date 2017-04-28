@@ -5,9 +5,16 @@ const studentSchema = new Schema({
   fname: String,
   lname: String,
   grade: String,
-  guardianName: String,
-  dob: String,
-  status: String
+  guardian: String,
+  amount: Number,
+  dueDate: Number,
+  duplicate: Boolean,
+  arears: Number,
+  month:{
+    areas: Number,
+    current: String,
+    advance: Number
+  }
 })
 
 module.exports = mongoose.model('Student',studentSchema);

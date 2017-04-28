@@ -2,6 +2,7 @@ import React from "react";
 import Head from "./components/Head";
 import Link from "next/link";
 import ReactEcharts from "echarts-for-react";
+import $ from "jquery";
 
 import Sidebar from "./components/Sidebar";
 import TopMenu from "./components/TopMenu";
@@ -13,7 +14,7 @@ export default class extends React.Component{
         // Add title
         title: {
             text: 'Challan Overview',
-            subtext: 'Shows number of challans collected vs remaining',
+            subtext: 'Shows Challan stats',
             x: 'center'
         },
 
@@ -93,6 +94,100 @@ export default class extends React.Component{
     return basic_pie_options;
   }
 
+  getAmountOptions() {
+    const basic_pie_options = {
+
+        // Add title
+        title: {
+            text: 'Amount Overview',
+            subtext: 'Shows amount collection stats',
+            x: 'center'
+        },
+
+        // Add tooltip
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+
+        // Add legend
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['Collected', 'Remaining']
+        },
+
+        // Display toolbox
+        toolbox: {
+            show: true,
+            orient: 'vertical',
+            feature: {
+                mark: {
+                    show: true,
+                    title: {
+                        mark: 'Markline switch',
+                        markUndo: 'Undo markline',
+                        markClear: 'Clear markline'
+                    }
+                },
+                magicType: {
+                    show: true,
+                    title: {
+                        pie: 'Switch to pies',
+                        funnel: 'Switch to funnel',
+                    },
+                    type: ['pie', 'funnel'],
+                    option: {
+                        funnel: {
+                            x: '25%',
+                            y: '20%',
+                            width: '50%',
+                            height: '70%',
+                            funnelAlign: 'left',
+                            max: 1548
+                        }
+                    }
+                },
+                restore: {
+                    show: true,
+                    title: 'Restore'
+                },
+                saveAsImage: {
+                    show: true,
+                    title: 'Same as image',
+                    lang: ['Save']
+                }
+            }
+        },
+
+        // Enable drag recalculate
+        calculable: true,
+
+        // Add series
+        series: [{
+            name: 'PKR Amount',
+            type: 'pie',
+            radius: '70%',
+            center: ['50%', '57.5%'],
+            data: [
+                {value: 120000, name: 'Remaining'},
+                {value: 100000, name: 'Collected'}
+
+            ]
+        }]
+    };
+    return basic_pie_options;
+  }
+
+  getAllStudents(){
+    $.get('/allstudents', (response) => {
+      this.setState({data: response});
+    })
+  }
+
+  componentDidMount(){
+    this.getAllStudents();
+  }
 
   render(){
     return(
@@ -111,7 +206,7 @@ export default class extends React.Component{
 
                 {/* ROW STARTS */}
                 <div className="row">
-                  <div className="col-md-12">
+                  <div className="col-md-6">
 
       							{/* <!-- Basic pie chart --> */}
       						<div className="panel panel-flat">
@@ -125,6 +220,21 @@ export default class extends React.Component{
                     </div>
       							</div>
       							{/* <!-- /bacis pie chart --> */}
+
+                    <div className="col-md-6">
+
+        							{/* <!-- Basic pie chart --> */}
+        						<div className="panel panel-flat">
+
+                        <div className="panel-body">
+                          <ReactEcharts
+                          option={this.getAmountOptions()}
+                          style={{height: '350px', width: '100%'}}
+                          className='react_for_echarts' />
+        								</div>
+                      </div>
+        							</div>
+        							{/* <!-- /bacis pie chart --> */}
 
                 </div>
                 {/* ROW ENDS */}
@@ -148,8 +258,9 @@ export default class extends React.Component{
                         </tr>
                       </thead>
                       <tbody>
+                        
                         <tr>
-                          <td>Marth</td>
+                          <td>Zahid</td>
                           <td>Enright</td>
                           <td>Mr. Asad Channa</td>
                           <td>22 Jun 1972</td>

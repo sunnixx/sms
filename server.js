@@ -9,6 +9,7 @@ const passportConf = require('./config/passport')
 const MongoStore = require('connect-mongo')(session)
 const secret = require('./config/secret')
 const User = require('./models/user')
+const Student = require('./models/student')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -94,8 +95,30 @@ app.prepare()
     }
   })
 
-  server.post('/addstudent', (req,res) => {
+  server.post('/addchallan', (req,res) => {
+    var student = new Student();
 
+    student.fname = req.body.fname;
+    student.lname = req.body.lname;
+    student.grade = req.body.grade;
+    student.guardian = req.body.guardian
+    student.amount = req.body.amount;
+
+    student.save(function(err,done){
+      if(err) {return done(err);}
+      else{res.redirect('/finance')}
+
+    })
+
+  })
+
+  server.get('/allstudents', (req,res) => {
+    Student.find({}, function(err,student,done){
+      if(err){return done(err)}
+      else{
+        res.json(student);
+      }
+    })
   })
 
   server.get('/logout', (req,res) => {

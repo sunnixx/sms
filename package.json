@@ -17,6 +17,7 @@
     "echarts-for-react": "^1.2.1",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
+    "jquery": "^3.2.1",
     "mongoose": "^4.9.5",
     "next": "^2.1.1",
     "passport": "^0.3.2",
