@@ -103,6 +103,11 @@ app.prepare()
     student.grade = req.body.grade;
     student.guardian = req.body.guardian
     student.amount = req.body.amount;
+    student.gender = req.body.genderRadio;
+    student.issueDate = req.body.issueDate;
+    student.dueDate = req.body.dueDate;
+    student.feeMonth = req.body.feeMonth;
+    student.amount = req.body.amount;
 
     student.save(function(err,done){
       if(err) {return done(err);}
@@ -113,12 +118,16 @@ app.prepare()
   })
 
   server.get('/allstudents', (req,res) => {
-    Student.find({}, function(err,student,done){
-      if(err){return done(err)}
-      else{
-        res.json(student);
-      }
-    })
+    if(req.user){
+      Student.find({}, function(err,student,done){
+        if(err){return done(err)}
+        else{
+          res.json(student);
+        }
+      })
+    }else{
+      res.redirect('/')
+    }
   })
 
   server.get('/logout', (req,res) => {

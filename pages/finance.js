@@ -1,183 +1,14 @@
 import React from "react";
 import Head from "./components/Head";
 import Link from "next/link";
-import ReactEcharts from "echarts-for-react";
 import $ from "jquery";
 
 import Sidebar from "./components/Sidebar";
 import TopMenu from "./components/TopMenu";
+import MonthlyChallanChart from "./components/charts/monthlyChart";
+import MonthlyAmountChart from "./components/charts/monthlyAmount";
 
 export default class extends React.Component{
-  getOptions() {
-    const basic_pie_options = {
-
-        // Add title
-        title: {
-            text: 'Challan Overview',
-            subtext: 'Shows Challan stats',
-            x: 'center'
-        },
-
-        // Add tooltip
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-
-        // Add legend
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data: ['Issued', 'Not Issued','Pending']
-        },
-
-        // Display toolbox
-        toolbox: {
-            show: true,
-            orient: 'vertical',
-            feature: {
-                mark: {
-                    show: true,
-                    title: {
-                        mark: 'Markline switch',
-                        markUndo: 'Undo markline',
-                        markClear: 'Clear markline'
-                    }
-                },
-                magicType: {
-                    show: true,
-                    title: {
-                        pie: 'Switch to pies',
-                        funnel: 'Switch to funnel',
-                    },
-                    type: ['pie', 'funnel'],
-                    option: {
-                        funnel: {
-                            x: '25%',
-                            y: '20%',
-                            width: '50%',
-                            height: '70%',
-                            funnelAlign: 'left',
-                            max: 1548
-                        }
-                    }
-                },
-                restore: {
-                    show: true,
-                    title: 'Restore'
-                },
-                saveAsImage: {
-                    show: true,
-                    title: 'Same as image',
-                    lang: ['Save']
-                }
-            }
-        },
-
-        // Enable drag recalculate
-        calculable: true,
-
-        // Add series
-        series: [{
-            name: 'Challans',
-            type: 'pie',
-            radius: '70%',
-            center: ['50%', '57.5%'],
-            data: [
-                {value: 20, name: 'Not Issued'},
-                {value: 130, name: 'Issued'},
-                {value: 40, name: 'Pending'}
-
-            ]
-        }]
-    };
-    return basic_pie_options;
-  }
-
-  getAmountOptions() {
-    const basic_pie_options = {
-
-        // Add title
-        title: {
-            text: 'Amount Overview',
-            subtext: 'Shows amount collection stats',
-            x: 'center'
-        },
-
-        // Add tooltip
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-
-        // Add legend
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data: ['Collected', 'Remaining']
-        },
-
-        // Display toolbox
-        toolbox: {
-            show: true,
-            orient: 'vertical',
-            feature: {
-                mark: {
-                    show: true,
-                    title: {
-                        mark: 'Markline switch',
-                        markUndo: 'Undo markline',
-                        markClear: 'Clear markline'
-                    }
-                },
-                magicType: {
-                    show: true,
-                    title: {
-                        pie: 'Switch to pies',
-                        funnel: 'Switch to funnel',
-                    },
-                    type: ['pie', 'funnel'],
-                    option: {
-                        funnel: {
-                            x: '25%',
-                            y: '20%',
-                            width: '50%',
-                            height: '70%',
-                            funnelAlign: 'left',
-                            max: 1548
-                        }
-                    }
-                },
-                restore: {
-                    show: true,
-                    title: 'Restore'
-                },
-                saveAsImage: {
-                    show: true,
-                    title: 'Same as image',
-                    lang: ['Save']
-                }
-            }
-        },
-
-        // Enable drag recalculate
-        calculable: true,
-
-        // Add series
-        series: [{
-            name: 'PKR Amount',
-            type: 'pie',
-            radius: '70%',
-            center: ['50%', '57.5%'],
-            data: [
-                {value: 120000, name: 'Remaining'},
-                {value: 100000, name: 'Collected'}
-
-            ]
-        }]
-    };
-    return basic_pie_options;
-  }
 
   getAllStudents(){
     $.get('/allstudents', (response) => {
@@ -212,10 +43,7 @@ export default class extends React.Component{
       						<div className="panel panel-flat">
 
                       <div className="panel-body">
-                        <ReactEcharts
-                        option={this.getOptions()}
-                        style={{height: '350px', width: '100%'}}
-                        className='react_for_echarts' />
+                        <MonthlyChallanChart></MonthlyChallanChart>
       								</div>
                     </div>
       							</div>
@@ -227,10 +55,7 @@ export default class extends React.Component{
         						<div className="panel panel-flat">
 
                         <div className="panel-body">
-                          <ReactEcharts
-                          option={this.getAmountOptions()}
-                          style={{height: '350px', width: '100%'}}
-                          className='react_for_echarts' />
+                          <MonthlyAmountChart></MonthlyAmountChart>
         								</div>
                       </div>
         							</div>
@@ -251,19 +76,23 @@ export default class extends React.Component{
                         <tr>
                           <th>First Name</th>
                           <th>Last Name</th>
-                          <th>Guardian's Name</th>
-                          <th>DOB</th>
+                          <th>Fathers Name</th>
+                          <th>Issue Date</th>
+                          <th>Fee Month</th>
+                          <th>Due Date</th>
                           <th>Status</th>
                           <th className="text-center">Actions</th>
                         </tr>
                       </thead>
                       <tbody>
-                        
+
                         <tr>
                           <td>Zahid</td>
                           <td>Enright</td>
                           <td>Mr. Asad Channa</td>
-                          <td>22 Jun 1972</td>
+                          <td>04 Apr, 2017</td>
+                          <td>April</td>
+                          <td>04 May, 2017</td>
                           <td><span className="label label-success">Paid</span></td>
                           <td className="text-center">
                             <ul className="icons-list">
@@ -283,7 +112,9 @@ export default class extends React.Component{
                           <td>Jackelyn</td>
                           <td>Weible</td>
                           <td><a href="#">Mr. Norullah Baloch</a></td>
-                          <td>3 Oct 1981</td>
+                          <td>04 Apr, 2017</td>
+                          <td>April</td>
+                          <td>04 May, 2017</td>
                           <td><span className="label label-danger">Not Paid</span></td>
                           <td className="text-center">
                             <ul className="icons-list">

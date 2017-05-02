@@ -36,10 +36,6 @@ var _link = require("next\\dist\\lib\\link.js");
 
 var _link2 = _interopRequireDefault(_link);
 
-var _echartsForReact = require("echarts-for-react");
-
-var _echartsForReact2 = _interopRequireDefault(_echartsForReact);
-
 var _jquery = require("jquery");
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -51,6 +47,14 @@ var _Sidebar2 = _interopRequireDefault(_Sidebar);
 var _TopMenu = require("./components/TopMenu");
 
 var _TopMenu2 = _interopRequireDefault(_TopMenu);
+
+var _monthlyChart = require("./components/charts/monthlyChart");
+
+var _monthlyChart2 = _interopRequireDefault(_monthlyChart);
+
+var _monthlyAmount = require("./components/charts/monthlyAmount");
+
+var _monthlyAmount2 = _interopRequireDefault(_monthlyAmount);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -64,170 +68,6 @@ var _class = function (_React$Component) {
   }
 
   (0, _createClass3.default)(_class, [{
-    key: "getOptions",
-    value: function getOptions() {
-      var basic_pie_options = {
-
-        // Add title
-        title: {
-          text: 'Challan Overview',
-          subtext: 'Shows Challan stats',
-          x: 'center'
-        },
-
-        // Add tooltip
-        tooltip: {
-          trigger: 'item',
-          formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-
-        // Add legend
-        legend: {
-          orient: 'vertical',
-          x: 'left',
-          data: ['Issued', 'Not Issued', 'Pending']
-        },
-
-        // Display toolbox
-        toolbox: {
-          show: true,
-          orient: 'vertical',
-          feature: {
-            mark: {
-              show: true,
-              title: {
-                mark: 'Markline switch',
-                markUndo: 'Undo markline',
-                markClear: 'Clear markline'
-              }
-            },
-            magicType: {
-              show: true,
-              title: {
-                pie: 'Switch to pies',
-                funnel: 'Switch to funnel'
-              },
-              type: ['pie', 'funnel'],
-              option: {
-                funnel: {
-                  x: '25%',
-                  y: '20%',
-                  width: '50%',
-                  height: '70%',
-                  funnelAlign: 'left',
-                  max: 1548
-                }
-              }
-            },
-            restore: {
-              show: true,
-              title: 'Restore'
-            },
-            saveAsImage: {
-              show: true,
-              title: 'Same as image',
-              lang: ['Save']
-            }
-          }
-        },
-
-        // Enable drag recalculate
-        calculable: true,
-
-        // Add series
-        series: [{
-          name: 'Challans',
-          type: 'pie',
-          radius: '70%',
-          center: ['50%', '57.5%'],
-          data: [{ value: 20, name: 'Not Issued' }, { value: 130, name: 'Issued' }, { value: 40, name: 'Pending' }]
-        }]
-      };
-      return basic_pie_options;
-    }
-  }, {
-    key: "getAmountOptions",
-    value: function getAmountOptions() {
-      var basic_pie_options = {
-
-        // Add title
-        title: {
-          text: 'Amount Overview',
-          subtext: 'Shows amount collection stats',
-          x: 'center'
-        },
-
-        // Add tooltip
-        tooltip: {
-          trigger: 'item',
-          formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-
-        // Add legend
-        legend: {
-          orient: 'vertical',
-          x: 'left',
-          data: ['Collected', 'Remaining']
-        },
-
-        // Display toolbox
-        toolbox: {
-          show: true,
-          orient: 'vertical',
-          feature: {
-            mark: {
-              show: true,
-              title: {
-                mark: 'Markline switch',
-                markUndo: 'Undo markline',
-                markClear: 'Clear markline'
-              }
-            },
-            magicType: {
-              show: true,
-              title: {
-                pie: 'Switch to pies',
-                funnel: 'Switch to funnel'
-              },
-              type: ['pie', 'funnel'],
-              option: {
-                funnel: {
-                  x: '25%',
-                  y: '20%',
-                  width: '50%',
-                  height: '70%',
-                  funnelAlign: 'left',
-                  max: 1548
-                }
-              }
-            },
-            restore: {
-              show: true,
-              title: 'Restore'
-            },
-            saveAsImage: {
-              show: true,
-              title: 'Same as image',
-              lang: ['Save']
-            }
-          }
-        },
-
-        // Enable drag recalculate
-        calculable: true,
-
-        // Add series
-        series: [{
-          name: 'PKR Amount',
-          type: 'pie',
-          radius: '70%',
-          center: ['50%', '57.5%'],
-          data: [{ value: 120000, name: 'Remaining' }, { value: 100000, name: 'Collected' }]
-        }]
-      };
-      return basic_pie_options;
-    }
-  }, {
     key: "getAllStudents",
     value: function getAllStudents() {
       var _this2 = this;
@@ -244,13 +84,7 @@ var _class = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, { financeActive: "active", challanShow: "block", challanActive: "active" }), _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "row" }, _react2.default.createElement("div", { className: "col-md-6" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_echartsForReact2.default, {
-        option: this.getOptions(),
-        style: { height: '350px', width: '100%' },
-        className: "react_for_echarts" })))), _react2.default.createElement("div", { className: "col-md-6" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_echartsForReact2.default, {
-        option: this.getAmountOptions(),
-        style: { height: '350px', width: '100%' },
-        className: "react_for_echarts" })))))), _react2.default.createElement("div", { className: "col-md-12" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-heading" }, _react2.default.createElement("h5", { className: "panel-title" }, "Students information regarding Challan")), _react2.default.createElement("table", { className: "table datatable-basic" }, _react2.default.createElement("thead", null, _react2.default.createElement("tr", null, _react2.default.createElement("th", null, "First Name"), _react2.default.createElement("th", null, "Last Name"), _react2.default.createElement("th", null, "Guardian's Name"), _react2.default.createElement("th", null, "DOB"), _react2.default.createElement("th", null, "Status"), _react2.default.createElement("th", { className: "text-center" }, "Actions"))), _react2.default.createElement("tbody", null, _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Zahid"), _react2.default.createElement("td", null, "Enright"), _react2.default.createElement("td", null, "Mr. Asad Channa"), _react2.default.createElement("td", null, "22 Jun 1972"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-success" }, "Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan"))))))), _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Jackelyn"), _react2.default.createElement("td", null, "Weible"), _react2.default.createElement("td", null, _react2.default.createElement("a", { href: "#" }, "Mr. Norullah Baloch")), _react2.default.createElement("td", null, "3 Oct 1981"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-danger" }, "Not Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan")))))))))))))));
+      return _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, { financeActive: "active", challanShow: "block", challanActive: "active" }), _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "row" }, _react2.default.createElement("div", { className: "col-md-6" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_monthlyChart2.default, null)))), _react2.default.createElement("div", { className: "col-md-6" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement(_monthlyAmount2.default, null)))))), _react2.default.createElement("div", { className: "col-md-12" }, _react2.default.createElement("div", { className: "panel panel-flat" }, _react2.default.createElement("div", { className: "panel-heading" }, _react2.default.createElement("h5", { className: "panel-title" }, "Students information regarding Challan")), _react2.default.createElement("table", { className: "table datatable-basic" }, _react2.default.createElement("thead", null, _react2.default.createElement("tr", null, _react2.default.createElement("th", null, "First Name"), _react2.default.createElement("th", null, "Last Name"), _react2.default.createElement("th", null, "Fathers Name"), _react2.default.createElement("th", null, "Issue Date"), _react2.default.createElement("th", null, "Fee Month"), _react2.default.createElement("th", null, "Due Date"), _react2.default.createElement("th", null, "Status"), _react2.default.createElement("th", { className: "text-center" }, "Actions"))), _react2.default.createElement("tbody", null, _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Zahid"), _react2.default.createElement("td", null, "Enright"), _react2.default.createElement("td", null, "Mr. Asad Channa"), _react2.default.createElement("td", null, "04 Apr, 2017"), _react2.default.createElement("td", null, "April"), _react2.default.createElement("td", null, "04 May, 2017"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-success" }, "Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan"))))))), _react2.default.createElement("tr", null, _react2.default.createElement("td", null, "Jackelyn"), _react2.default.createElement("td", null, "Weible"), _react2.default.createElement("td", null, _react2.default.createElement("a", { href: "#" }, "Mr. Norullah Baloch")), _react2.default.createElement("td", null, "04 Apr, 2017"), _react2.default.createElement("td", null, "April"), _react2.default.createElement("td", null, "04 May, 2017"), _react2.default.createElement("td", null, _react2.default.createElement("span", { className: "label label-danger" }, "Not Paid")), _react2.default.createElement("td", { className: "text-center" }, _react2.default.createElement("ul", { className: "icons-list" }, _react2.default.createElement("li", { className: "dropdown" }, _react2.default.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown" }, _react2.default.createElement("i", { className: "icon-menu9" })), _react2.default.createElement("ul", { className: "dropdown-menu dropdown-menu-right" }, _react2.default.createElement("li", null, _react2.default.createElement("a", { href: "#" }, _react2.default.createElement("i", { className: "icon-file-pdf" }), " Generate Challan")))))))))))))));
     }
   }]);
 

@@ -4,17 +4,23 @@ const mongoose = require('mongoose'),
 const studentSchema = new Schema({
   fname: String,
   lname: String,
-  grade: String,
   guardian: String,
   amount: Number,
-  dueDate: Number,
-  duplicate: Boolean,
-  arears: Number,
-  month:{
-    areas: Number,
-    current: String,
-    advance: Number
-  }
+  grade: String,
+  gender: String,
+  issueDate: Date,
+  feeMonth: String,
+  dueDate: Date,
+  admissionFee: Number,
+  securityDeposit: Number,
+  annualFee: Number,
+  course: Number,
+  Arrears: Number,
+  duplicateChallan: Number,
+  bDuplicateChallan: Boolean,
+  feeReminders: Number,
+  Photocopies: Number,
+  others: Number
 })
 
 module.exports = mongoose.model('Student',studentSchema);
