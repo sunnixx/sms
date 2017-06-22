@@ -16,11 +16,11 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 
-//DATABASE CONNECTION
-mongoose.connect(secret.database,function(err,done){
-  if(err){return done(err)}
-  else{console.log('DATABASE CONNECTED')}
-})
+  //DATABASE CONNECTION
+  mongoose.connect(secret.database,function(err){
+    if(err){console.log(err);}
+    else{console.log('DATABASE CONNECTED')}
+  })
 
 app.prepare()
 .then(() => {
@@ -66,13 +66,13 @@ app.prepare()
     user.password = req.body.password;
     user.email = req.body.email;
 
-    User.findOne({email:req.body.email}, function(err,existingUser,done){
-      if(err){return done(err)}
+    User.findOne({email:req.body.email}, function(err,existingUser,next){
+      if(err){return next(err)}
       if(existingUser){
         res.redirect('/signup');
       }else{
         user.save(function(err,user){
-          if(err) return done(err)
+          if(err) {console.log(err);}
           res.redirect('/login');
         })
       }
@@ -108,13 +108,24 @@ app.prepare()
     student.dueDate = req.body.dueDate;
     student.feeMonth = req.body.feeMonth;
     student.amount = req.body.amount;
+    student.rollNo = req.body.rollNo;
 
-    student.save(function(err,done){
-      if(err) {return done(err);}
+    student.save(function(err,student){
+      if(err) {console.log(err);}
       else{res.redirect('/finance')}
 
     })
 
+  })
+  var Query_RollNo='';
+  server.get('/generatechallan',(req,res)=>{
+    if(req.user){
+         Query_RollNo= req.query.rollNo;
+
+      return app.render(req,res,'/generatechallan',req.query)
+    }else{
+      res.redirect('/login')
+    }
   })
 
   server.get('/allstudents', (req,res) => {
@@ -124,11 +135,28 @@ app.prepare()
         else{
           res.json(student);
         }
-      })
+      }).catch((err)=>{
+        console.log(err);
+      });
     }else{
       res.redirect('/')
     }
   })
+  server.get('/Send_ChallanData',(req,res)=>{
+    if(req.user){
+      Student.find({rollNo : Query_RollNo}, function(err,student,done){
+        if(err){return done(err)}
+        else{
+          res.json(student);
+        }
+      }).catch((err)=>{
+        console.log(err);
+      });
+    }else{
+      res.redirect('/')
+    }
+  })
+
 
   server.get('/logout', (req,res) => {
     req.logout();
