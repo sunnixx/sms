@@ -110,54 +110,6 @@ export default class extends React.Component{
                           )
                         })
                       }
-
-                        {/* <tr>
-                          <td>Zahid</td>
-                          <td>Enright</td>
-                          <td>Mr. Asad Channa</td>
-                          <td><a href='#'>G1_124</a></td>
-                          <td>04 Apr, 2017</td>
-                          <td>April</td>
-                          <td>04 May, 2017</td>
-                          <td><span className="label label-success">Paid</span></td>
-                          <td className="text-center">
-                            <ul className="icons-list">
-                              <li className="dropdown">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                  <i className="icon-menu9"></i>
-                                </a>
-                                <ul className="dropdown-menu dropdown-menu-right">
-                                  <Link href='/generatechallan'><li><a><i className='icon-file-pdf'></i>Generate Challan</a></li></Link>
-                                  {/* <li><a href="/generatechallan"><i className="icon-file-pdf"></i> Generate Challan</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Jackelyn</td>
-                          <td>Weible</td>
-                          <td>Mr. Norullah Baloch</td>
-                          <td><input type='hidden' value='G1-123' /></td>
-                          <td>04 Apr, 2017</td>
-                          <td>April</td>
-                          <td>04 May, 2017</td>
-                          <td><span className="label label-danger">Not Paid</span></td>
-                          <td className="text-center">
-                            <ul className="icons-list">
-                              <li className="dropdown">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                  <i className="icon-menu9"></i>
-                                </a>
-
-                                <ul className="dropdown-menu dropdown-menu-right">
-                                    <Link href='/generatechallan'><li><a><i className='icon-file-pdf'></i>Generate Challan</a></li></Link>
-                                  {/* <li><a href="#"><i className="icon-file-pdf"></i> Generate Challan</a></li> \
-                                </ul>
-                              </li>
-                            </ul>
-                          </td>
-                        </tr> */}
                       </tbody>
                     </table>
                   </div>
