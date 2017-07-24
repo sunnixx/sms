@@ -87,20 +87,20 @@ export default class extends React.Component{
                         {this.state.data.map((element)=>{
                           return(
                             <tr key={element.id}>
-                              <td key={'firstname' + element.id}>{element.fname}</td>
+                              <td key={'firstname' + element.id}>{element.fname + element.rollNo}</td>
                               <td key={'lastname' + element.id}>{element.lname}</td>
                               <td key={'guard' + element.id}>{element.guardian}</td>
                               <td key={'Issue' + element.id}>{element.issueDate}</td>
                               <td key={'MonthFee' + element.id}>{element.feeMonth}</td>
                               <td key={'Date' + element.id}>{element.dueDate}</td>
-                              <td><span className="label label-success">Paid</span></td>
-                              <td className="text-center">
-                                <ul className="icons-list">
-                                  <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                      <i className="icon-menu9"></i>
+                              <td key={'status' + element.id}><span className="label label-success">Paid</span></td>
+                              <td key={'text' + element.id} className="text-center">
+                                <ul key={'iconlist' + element.id} className="icons-list">
+                                  <li key={'dropdown' + element.id} className="dropdown">
+                                    <a key={'dropdowntoggle' + element.id} href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                      <i key={'iconmenu9' + element.id} className="icon-menu9"></i>
                                     </a>
-                                    <ul className="dropdown-menu dropdown-menu-right">
+                                    <ul key={'dropdownmenu' + element.id} className="dropdown-menu dropdown-menu-right">
                                       <Link href={{pathname :'/generatechallan', query :{rollNo : element.rollNo}}}><li><a><i className='icon-file-pdf'></i>Generate Challan</a></li></Link>
                                     </ul>
                                   </li>
@@ -108,6 +108,7 @@ export default class extends React.Component{
                               </td>
                             </tr>
                           )
+            
                         })
                       }
                       </tbody>

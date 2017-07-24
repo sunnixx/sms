@@ -1,6 +1,6 @@
 import React from "react"
 import Head from "../Head"
-import Style from "../stylesheet/style"
+import Style from "../stylesheets/style"
 import Jquery from "jquery"
 
 export default class extends React.Component{

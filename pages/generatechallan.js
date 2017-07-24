@@ -1,6 +1,6 @@
 import React from "react"
 import Head from "./components/Head"
-import Style from "./components/stylesheet/style.js"
+import Style from "./components/stylesheets/style.js"
 import ChallanData from "./components/challanpart/Chlndata"
 
 export default class extends React.Component{

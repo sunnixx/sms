@@ -120,7 +120,7 @@ app.prepare()
   var Query_RollNo='';
   server.get('/generatechallan',(req,res)=>{
     if(req.user){
-         Query_RollNo= req.query.rollNo;
+         Query_RollNo = req.query.rollNo;
 
       return app.render(req,res,'/generatechallan',req.query)
     }else{

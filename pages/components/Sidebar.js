@@ -23,7 +23,7 @@ export default class extends React.Component{
 
 						<div className="navigation-wrapper collapse" id="user-nav">
 							<ul className="navigation">
-								<li><a href="#" className="legitRipple"><i className="icon-user-plus"></i> <span>My profile</span></a></li>
+								<li><Link href='/profile'><a href="#" className="legitRipple"><i className="icon-user-plus"></i> <span>My profile</span></a></Link></li>
 								<li><a href="#" className="legitRipple"><i className="icon-cog5"></i> <span>Account settings</span></a></li>
 								<li><Link href="/logout"><a className="legitRipple"><i className="icon-switch2"></i> <span>Logout</span></a></Link></li>
 							</ul>
