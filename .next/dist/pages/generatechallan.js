@@ -28,15 +28,15 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Head = require("./components/Head");
+var _Head = require("../components/Head");
 
 var _Head2 = _interopRequireDefault(_Head);
 
-var _style = require("./components/stylesheets/style.js");
+var _style = require("../components/stylesheets/style.js");
 
 var _style2 = _interopRequireDefault(_style);
 
-var _Chlndata = require("./components/challanpart/Chlndata");
+var _Chlndata = require("../components/challanpart/Chlndata");
 
 var _Chlndata2 = _interopRequireDefault(_Chlndata);
 

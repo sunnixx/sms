@@ -6,7 +6,14 @@ const mongoose = require('mongoose'),
 const UserSchema = new Schema({
     username: String,
     password: String,
-    email: String
+    email: {type: String, unique: true},
+
+    profile:{
+      name: String,
+      picture: String,
+    },
+
+    role: String
 })
 
 //Hash Password before sending it to the DATABASE

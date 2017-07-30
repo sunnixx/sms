@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from "./components/Head";
-import TopMenu from "./components/TopMenu";
-import Sidebar from "./components/Sidebar";
+import Head from "../components/Head";
+import TopMenu from "../components/TopMenu";
+import Sidebar from "../components/Sidebar";
 
 export default class extends React.Component{
     render(){

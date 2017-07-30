@@ -28,7 +28,7 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Head = require("./components/Head");
+var _Head = require("../components/Head");
 
 var _Head2 = _interopRequireDefault(_Head);
 
@@ -44,19 +44,19 @@ var _axios = require("axios");
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _Sidebar = require("./components/Sidebar");
+var _Sidebar = require("../components/Sidebar");
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
-var _TopMenu = require("./components/TopMenu");
+var _TopMenu = require("../components/TopMenu");
 
 var _TopMenu2 = _interopRequireDefault(_TopMenu);
 
-var _monthlyChart = require("./components/charts/monthlyChart");
+var _monthlyChart = require("../components/charts/monthlyChart");
 
 var _monthlyChart2 = _interopRequireDefault(_monthlyChart);
 
-var _monthlyAmount = require("./components/charts/monthlyAmount");
+var _monthlyAmount = require("../components/charts/monthlyAmount");
 
 var _monthlyAmount2 = _interopRequireDefault(_monthlyAmount);
 

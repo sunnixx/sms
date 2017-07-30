@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "./components/Head"
+import Head from "../components/Head"
 import Link from "next/link"
 
 export default class extends React.Component{
@@ -15,7 +15,7 @@ export default class extends React.Component{
 
       				<div className="content">
 
-      					<form action="/signup" method="post">
+      					<form action="/signup" method="post" encType='multipart/form-data'>
       						<div className="panel panel-body login-form">
       							<div className="text-center">
       								<div className="icon-object border-slate-300 text-slate-300"><img width='100' height='80' src='static/assets/images/logo-1.jpg'/></div>
@@ -36,6 +36,13 @@ export default class extends React.Component{
       								</div>
       							</div>
 
+										<div className="form-group has-feedback has-feedback-left">
+      								<input type="name" className="form-control" name="name" placeholder="Full Name" />
+      								<div className="form-control-feedback">
+      									<i className="icon-lock2 text-muted"></i>
+      								</div>
+      							</div>
+
       							<div className="form-group has-feedback has-feedback-left">
       								<input type="password" className="form-control" name="password" placeholder="Password" />
       								<div className="form-control-feedback">
@@ -43,7 +50,23 @@ export default class extends React.Component{
       								</div>
       							</div>
 
-      							<div className="form-group">
+								<div className="form-group has-feedback has-feedback-left">
+									<div className='form-group'>
+										<label>Role</label>
+										<select className='select' name='role'>
+											<optgroup label='Role'>
+												<option value='admin'>Admin</option>
+												<option value='director'>Director</option>
+												<option value='principal'>Pricipal</option>
+											</optgroup>
+										</select>
+									</div>
+      							</div>
+								<div className='form-group has-feedback has-feedback-left'>
+									<input type='file' name='avatar' />
+								</div>
+
+								<div className="form-group">
       								<button type="submit" className="btn bg-pink-400 btn-block">Sign Up <i className="icon-circle-right2 position-right"></i></button>
       							</div>
 

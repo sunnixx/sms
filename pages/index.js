@@ -1,7 +1,7 @@
 import React from "react";
-import Head from "./components/Head";
-import TopMenu from "./components/TopMenu";
-import Sidebar from "./components/Sidebar";
+import Head from "../components/Head";
+import TopMenu from "../components/TopMenu";
+import Sidebar from "../components/Sidebar";
 
 import Link from "next/link";
 
@@ -9,11 +9,11 @@ export default class extends React.Component{
   render(){
     return(
       <div>
-        <Head></Head>
-        <TopMenu></TopMenu>
+        <Head />
+        <TopMenu />
         <div className='page-container'>
           <div className="page-content">
-            <Sidebar dashboardActive="active"></Sidebar>
+            <Sidebar dashboardActive="active" />
 
             {/* CONTENT WRAPPER STARTS */}
             <div className="content-wrapper">

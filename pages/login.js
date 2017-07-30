@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "./components/Head"
+import Head from "../components/Head"
 import Link from "next/link"
 
 export default class extends React.Component{

@@ -1,13 +1,13 @@
 import React from "react";
-import Head from "./components/Head";
+import Head from "../components/Head";
 import Link from "next/link";
 import $ from "jquery";
 import axios from "axios";
 
-import Sidebar from "./components/Sidebar";
-import TopMenu from "./components/TopMenu";
-import MonthlyChallanChart from "./components/charts/monthlyChart";
-import MonthlyAmountChart from "./components/charts/monthlyAmount";
+import Sidebar from "../components/Sidebar";
+import TopMenu from "../components/TopMenu";
+import MonthlyChallanChart from "../components/charts/monthlyChart";
+import MonthlyAmountChart from "../components/charts/monthlyAmount";
 
 export default class extends React.Component{
   constructor(props){

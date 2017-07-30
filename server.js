@@ -10,6 +10,8 @@ const MongoStore = require('connect-mongo')(session)
 const secret = require('./config/secret')
 const User = require('./models/user')
 const Student = require('./models/student')
+const multer = require('multer')
+const upload = multer({dest: './static/uploads/img/'})
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -48,7 +50,8 @@ app.prepare()
   })
 
   server.get('/login', (req,res) => {
-    return app.render(req,res, '/login', req.query);
+    if(req.user){ res.redirect('/'); }
+    else{ return app.render(req,res, '/login', req.query); }
   })
 
   server.post('/login', passport.authenticate('local',{failureRedirect: '/login'}), (req,res) => {
@@ -56,15 +59,23 @@ app.prepare()
   })
 
   server.get('/signup', (req,res) => {
-    return app.render(req,res, '/signup', req.query);
+    if(req.user){
+      res.redirect('/');
+    }else{
+      return app.render(req,res, '/signup', req.query);
+    }
   })
 
-  server.post('/signup', (req,res) => {
+  server.post('/signup', upload.single('avatar'), (req,res) => {
+    
     var user = new User();
 
     user.username = req.body.username;
     user.password = req.body.password;
     user.email = req.body.email;
+    user.profile.name = req.body.name;
+    user.profile.picture = req.file.path;
+    user.role = req.body.role;
 
     User.findOne({email:req.body.email}, function(err,existingUser,next){
       if(err){return next(err)}
@@ -77,6 +88,18 @@ app.prepare()
         })
       }
     })
+  })
+
+  server.get('/getprofile', (req,res) => {
+    if(req.user){
+      res.json(req.user);
+    }else{
+      res.redirect('/login');
+    }
+  });
+
+  server.post('/profile', (req,res) => {
+    
   })
 
   server.get('/finance', (req,res) => {

@@ -1,12 +1,12 @@
 import React from "react"
-import Head from "./components/Head"
-import Style from "./components/stylesheets/style.js"
-import ChallanData from "./components/challanpart/Chlndata"
+import Head from "../components/Head"
+import Style from "../components/stylesheets/style.js"
+import ChallanData from "../components/challanpart/Chlndata"
 
 export default class extends React.Component{
   render(){
     return(
-      <div  >
+      <div>
         <Head />
         <div className="col-md-12 col-sm-12 col-xs-12"  >
           <div className='container'>
