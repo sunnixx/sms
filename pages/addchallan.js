@@ -12,10 +12,10 @@ export default class extends React.Component{
           formSwitchery="static/assets/js/plugins/forms/styling/switchery.min.js"
           formSwitch="static/assets/js/plugins/forms/styling/switch.min.js"
           formCheckbox="static/assets/js/pages/form_checkboxes_radios.js"></Head>
-        <TopMenu></TopMenu>
+        <TopMenu />
         <div className="page-container">
           <div className="page-content">
-            <Sidebar financeActive="active" challanShow="block" addStudentActive="active"></Sidebar>
+            <Sidebar financeActive="active" challanShow="block" addStudentActive="active" />
             <div className="content-wrapper">
               <div className="content">
                 <div className="panel panel-flat">
@@ -29,6 +29,13 @@ export default class extends React.Component{
                     <form className="form-horizontal" method="post" action="/addchallan">
                       <fieldset className="content-group">
                         <legend className="text-bold">Basic Information</legend>
+                        <div className="form-group">
+                          <label className="control-label col-lg-2">Roll No <span style={{color:"red"}}>*</span></label>
+                          <div className="col-lg-10">
+                            <input type="text" className="form-control" name="rollNo" required />
+                          </div>
+                        </div>
+
                         <div className="form-group">
                           <label className="control-label col-lg-2">First Name <span style={{color:"red"}}>*</span></label>
                           <div className="col-lg-10">

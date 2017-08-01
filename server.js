@@ -17,12 +17,13 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+var Query_RollNo='';
 
-  //DATABASE CONNECTION
-  mongoose.connect(secret.database,function(err){
-    if(err){console.log(err);}
-    else{console.log('DATABASE CONNECTED')}
-  })
+//DATABASE CONNECTION
+mongoose.connect(secret.database,function(err){
+  if(err){console.log(err);}
+  else{console.log('DATABASE CONNECTED')}
+})
 
 app.prepare()
 .then(() => {
@@ -138,21 +139,18 @@ app.prepare()
     student.arrears = req.body.arrears;
     student.bDuplicateChallan = req.body.bDuplicateChallan;
 
-    student.save(function(err,student){
-      if(err) {console.log(err);}
+    
+    student.save((err,student) => {
+      if(err){console.error("Error: ",err)}
       else{res.redirect('/finance')}
-
     })
   })
   
-  var Query_RollNo='';
   server.get('/generatechallan',(req,res)=>{
     if(req.user){
-         Query_RollNo = req.query.rollNo;
-
-      return app.render(req,res,'/generatechallan',req.query)
+      Query_RollNo = req.query.rollNo;
     }else{
-      res.redirect('/login')
+      res.redirect('/login');
     }
   })
 
@@ -177,6 +175,7 @@ app.prepare()
         if(err){return done(err)}
         else{
           res.json(student);
+          Query_RollNo = '';
         }
       }).catch((err)=>{
         console.log(err);

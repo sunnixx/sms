@@ -2,6 +2,7 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
+  rollNo: {type:String, unique:true},
   fname: String,
   lname: String,
   guardian: String,

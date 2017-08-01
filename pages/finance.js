@@ -21,17 +21,18 @@ export default class extends React.Component{
       this.setState({data:response.data})
     })
   }
+
   componentDidMount(){
     this.getAllStudents();
   }
   render(){
     return(
       <div>
-        <Head></Head>
-        <TopMenu></TopMenu>
+        <Head />
+        <TopMenu />
         <div className="page-container">
           <div className="page-content">
-            <Sidebar financeActive="active" challanShow="block" challanActive="active"></Sidebar>
+            <Sidebar financeActive="active" challanShow="block" challanActive="active" />
 
             {/* CONTENT WRAPPER START */}
             <div className="content-wrapper">
@@ -47,7 +48,7 @@ export default class extends React.Component{
       						<div className="panel panel-flat">
 
                       <div className="panel-body">
-                        <MonthlyChallanChart></MonthlyChallanChart>
+                        <MonthlyChallanChart />
       								</div>
                     </div>
       							</div>
@@ -59,7 +60,7 @@ export default class extends React.Component{
         						<div className="panel panel-flat">
 
                         <div className="panel-body">
-                          <MonthlyAmountChart></MonthlyAmountChart>
+                          <MonthlyAmountChart />
         								</div>
                       </div>
         							</div>
@@ -108,7 +109,7 @@ export default class extends React.Component{
                                       <i key={'iconmenu9' + element.id} className="icon-menu9"></i>
                                     </a>
                                     <ul key={'dropdownmenu' + element.id} className="dropdown-menu dropdown-menu-right">
-                                      <Link href={{pathname :'/generatechallan', query :{rollNo : element.rollNo}}}><li><a><i className='icon-file-pdf'></i>Generate Challan</a></li></Link>
+                                      <li><i className='icon-file-pdf'></i><Link href={{pathname :'/generatechallan', query :{rollNo:element.rollNo}}}><a>Generate Challan</a></Link></li>
                                     </ul>
                                   </li>
                                 </ul>
