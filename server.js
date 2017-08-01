@@ -130,16 +130,21 @@ app.prepare()
     student.issueDate = req.body.issueDate;
     student.dueDate = req.body.dueDate;
     student.feeMonth = req.body.feeMonth;
-    student.amount = req.body.amount;
+    student.admissionFee = req.body.admissionFee;
     student.rollNo = req.body.rollNo;
+    student.securityDeposit = req.body.securityDeposit;
+    student.annualFee = req.body.annualFee;
+    student.course = req.body.course;
+    student.arrears = req.body.arrears;
+    student.bDuplicateChallan = req.body.bDuplicateChallan;
 
     student.save(function(err,student){
       if(err) {console.log(err);}
       else{res.redirect('/finance')}
 
     })
-
   })
+  
   var Query_RollNo='';
   server.get('/generatechallan',(req,res)=>{
     if(req.user){
@@ -165,6 +170,7 @@ app.prepare()
       res.redirect('/')
     }
   })
+
   server.get('/Send_ChallanData',(req,res)=>{
     if(req.user){
       Student.find({rollNo : Query_RollNo}, function(err,student,done){

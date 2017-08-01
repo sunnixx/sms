@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "../components/Head";
 import Link from "next/link";
-import $ from "jquery";
 import axios from "axios";
 
 import Sidebar from "../components/Sidebar";
@@ -13,11 +12,17 @@ export default class extends React.Component{
   constructor(props){
     super(props);
     this.state = {data: []}
+
+    this.getAllStudents = this.getAllStudents.bind(this);
+  }
+
+  getAllStudents(){
+    axios.get('/allstudents').then((response) => {
+      this.setState({data:response.data})
+    })
   }
   componentDidMount(){
-    $.get('/allstudents',(response)=>{
-      this.setState({data:response})
-    })
+    this.getAllStudents();
   }
   render(){
     return(
@@ -67,12 +72,13 @@ export default class extends React.Component{
                 <div className="col-md-12">
                   <div className="panel panel-flat">
                     <div className="panel-heading">
-                      <h5 className="panel-title">Students information regarding Challan</h5>
+                      <h5 className="panel-title">Students Challan Info</h5>
                     </div>
 
                     <table className="table datatable-basic">
                       <thead>
                         <tr>
+                          <th>Roll No</th>
                           <th>First Name</th>
                           <th>Last Name</th>
                           <th>Fathers Name</th>
@@ -87,7 +93,8 @@ export default class extends React.Component{
                         {this.state.data.map((element)=>{
                           return(
                             <tr key={element.id}>
-                              <td key={'firstname' + element.id}>{element.fname + element.rollNo}</td>
+                              <td key={'rollno' + element.id}>{element.rollNo}</td>
+                              <td key={'firstname' + element.id}>{element.fname}</td>
                               <td key={'lastname' + element.id}>{element.lname}</td>
                               <td key={'guard' + element.id}>{element.guardian}</td>
                               <td key={'Issue' + element.id}>{element.issueDate}</td>

@@ -15,7 +15,7 @@ const studentSchema = new Schema({
   securityDeposit: Number,
   annualFee: Number,
   course: Number,
-  Arrears: Number,
+  arrears: Number,
   duplicateChallan: Number,
   bDuplicateChallan: Boolean,
   feeReminders: Number,

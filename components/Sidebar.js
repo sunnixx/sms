@@ -6,7 +6,7 @@ export default class extends React.Component{
 
 	constructor(props){
 		super(props);
-		this.state = {userProfile:{profile:{} } }
+		this.state = { userProfile:{profile:{} } }
 		
 		//Bind Methods
 		this.getProfileInfo = this.getProfileInfo.bind(this);
@@ -28,8 +28,6 @@ export default class extends React.Component{
     return(
       <div className="sidebar sidebar-main sidebar-default">
 				<div className="sidebar-content">
-
-
 					<div className="sidebar-user-material">
 						<div className="category-content">
 							<div className="sidebar-user-material-content">
@@ -55,7 +53,6 @@ export default class extends React.Component{
 					<div className="sidebar-category sidebar-category-visible">
 						<div className="category-content no-padding">
 							<ul className="navigation navigation-main navigation-accordion">
-
 
 								<li className="navigation-header"><span>Main</span> <i className="icon-menu" title="" data-original-title="Main pages"></i></li>
 								<li className={this.props.dashboardActive}><Link href='/'><a className="legitRipple"><i className="icon-home4"></i> <span>Dashboard</span></a></Link></li>

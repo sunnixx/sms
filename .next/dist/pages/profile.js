@@ -40,21 +40,47 @@ var _Sidebar = require("../components/Sidebar");
 
 var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
+var _axios = require("axios");
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _class = function (_React$Component) {
     (0, _inherits3.default)(_class, _React$Component);
 
-    function _class() {
+    function _class(props) {
         (0, _classCallCheck3.default)(this, _class);
 
-        return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).apply(this, arguments));
+        var _this = (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call(this, props));
+
+        _this.state = { userProfile: { profile: {} } };
+
+        //Bind Methods
+        _this.getProfileInfo = _this.getProfileInfo.bind(_this);
+        return _this;
     }
 
     (0, _createClass3.default)(_class, [{
+        key: "getProfileInfo",
+        value: function getProfileInfo() {
+            var _this2 = this;
+
+            _axios2.default.get('/getprofile').then(function (response) {
+                _this2.setState({ userProfile: response.data });
+            }).catch(function (err) {
+                console.error("The error: " + err);
+            });
+        }
+    }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            this.getProfileInfo();
+        }
+    }, {
         key: "render",
         value: function render() {
-            return _react2.default.createElement("main", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, { dashboardActive: "active" }), _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "row" }))))));
+            return _react2.default.createElement("main", null, _react2.default.createElement(_Head2.default, null), _react2.default.createElement(_TopMenu2.default, null), _react2.default.createElement("div", { className: "page-container" }, _react2.default.createElement("div", { className: "page-content" }, _react2.default.createElement(_Sidebar2.default, { dashboardActive: "active" }), _react2.default.createElement("div", { className: "content-wrapper" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "row" }, _react2.default.createElement("div", { className: "content" }, _react2.default.createElement("div", { className: "panel-heading" }, _react2.default.createElement("h5", { className: "panel-title" }, "User Profile")), _react2.default.createElement("div", { className: "panel-body" }, _react2.default.createElement("form", { method: "post", action: "/profile", encType: "multipart/form-data" }, _react2.default.createElement("label", null, "Full Name"), _react2.default.createElement("input", { type: "text", name: "name", className: "form-control", value: this.state.userProfile.profile.name }))))))))));
         }
     }]);
 

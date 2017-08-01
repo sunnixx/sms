@@ -120,11 +120,56 @@ export default class extends React.Component{
                         </div>
 
                         <div className="form-group">
-                          <label className="control-label col-lg-2">Amount <span style={{color:"red"}}>*</span></label>
+                          <label className="control-label col-lg-2">Admission Fee <span style={{color:"red"}}>*</span></label>
                           <div className="col-lg-10">
-                            <input type="number" className="form-control" name="amount" required />
+                            <input type="number" className="form-control" name="admissionFee" required />
                           </div>
                         </div>
+
+                        <div className="form-group">
+                          <label className="control-label col-lg-2">Security Deposit <span style={{color:"red"}}>*</span></label>
+                          <div className="col-lg-10">
+                            <input type="number" className="form-control" name="securityDeposit" required />
+                          </div>
+                        </div>
+
+                        <div className="form-group">
+                          <label className="control-label col-lg-2">Annual Fees <span style={{color:"red"}}>*</span></label>
+                          <div className="col-lg-10">
+                            <input type="number" className="form-control" name="annualFee" required />
+                          </div>
+                        </div>
+                        
+                        <div className="form-group">
+                          <label className="control-label col-lg-2">Course Fees <span style={{color:"red"}}>*</span></label>
+                          <div className="col-lg-10">
+                            <input type="number" className="form-control" name="course" required />
+                          </div>
+                        </div>
+
+                        <div className="form-group">
+                          <label className="control-label col-lg-2">Arrears <span style={{color:"red"}}>*</span></label>
+                          <div className="col-lg-10">
+                            <input type="number" className="form-control" name="arrears" required />
+                          </div>
+                        </div>
+
+                        <div className="form-group">
+                          <label className="control-label col-lg-2">Duplicate Challan <span style={{color:"red"}}>*</span></label>
+                          <div className="col-lg-10">
+                            <label className="radio-inline">
+                              <input type='radio' name='bDuplicateChallan' value='true' defaultChecked />
+                              Yes
+                            </label>
+                          </div>
+                          <div className="col-lg-10">
+                            <label className="radio-inline">
+                              <input type='radio' name='bDuplicateChallan' value='false' />
+                              No
+                            </label>
+                          </div>
+                        </div>
+
                       </fieldset>
                       <div className="text-right">
                         <button type="submit" className="btn btn-primary legitRipple">Submit <i className='icon-arrow-right14 position-right'></i></button>
