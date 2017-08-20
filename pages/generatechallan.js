@@ -17,7 +17,7 @@ export default class extends React.Component{
   getChallanData(){
     axios.get("/Send_ChallanData?rollNo="+this.props.url.query.rollNo).then((response) =>{
       this.setState({data: response.data})
-      // console.log(this.props.url.query.rollNo);
+      console.log(this.props.url.query.rollNo);
     })
   }
 
