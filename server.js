@@ -145,14 +145,14 @@ app.prepare()
       else{res.redirect('/finance')}
     })
   })
-  
-  // server.get('/generatechallan',(req,res)=>{
-  //   if(req.user){
-  //     Query_RollNo = req.query.rollNo;
-  //   }else{
-  //     res.redirect('/login');
-  //   }
-  // })
+
+  server.get('/generatechallan',(req,res)=>{
+    if(req.user){
+      Query_RollNo = req.query.rollNo;
+    }else{
+      res.redirect('/login');
+    }
+  })
 
   server.get('/allstudents', (req,res) => {
     if(req.user){
@@ -170,6 +170,7 @@ app.prepare()
   })
 
   server.get('/Send_ChallanData',(req,res)=>{
+
     console.log(req.query.rollNo);
     if(req.user){
       Student.find({rollNo : req.query.rollNo}, function(err,student,done){
