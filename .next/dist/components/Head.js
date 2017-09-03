@@ -28,21 +28,13 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 var _head = require("next/dist/lib/head.js");
-=======
-var _head = require("next\\dist\\lib\\head.js");
->>>>>>> 0a74d78379d9d30d7375f29fa9130a77460a3d85
 
 var _head2 = _interopRequireDefault(_head);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-<<<<<<< HEAD
-var _jsxFileName = "/home/sumair/Desktop/MEAN STACK/My Work/sms-master/components/Head.js";
-=======
-var _jsxFileName = "C:\\Users\\Dell\\Desktop\\sms\\components\\Head.js";
->>>>>>> 0a74d78379d9d30d7375f29fa9130a77460a3d85
+var _jsxFileName = "/home/sumair/MEAN STACK/My Work/sms/components/Head.js";
 
 
 var _class = function (_React$Component) {
