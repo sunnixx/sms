@@ -17,10 +17,9 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-var Query_RollNo='';
 
 //DATABASE CONNECTION
-mongoose.connect(secret.database,function(err){
+mongoose.connect(secret.database,{useMongoClient: true},function(err){
   if(err){console.log(err);}
   else{console.log('DATABASE CONNECTED')}
 })
@@ -146,14 +145,6 @@ app.prepare()
     })
   })
 
-  server.get('/generatechallan',(req,res)=>{
-    if(req.user){
-      Query_RollNo = req.query.rollNo;
-    }else{
-      res.redirect('/login');
-    }
-  })
-
   server.get('/allstudents', (req,res) => {
     if(req.user){
       Student.find({}, function(err,student,done){
@@ -171,7 +162,6 @@ app.prepare()
 
   server.get('/Send_ChallanData',(req,res)=>{
 
-    console.log(req.query.rollNo);
     if(req.user){
       Student.find({rollNo : req.query.rollNo}, function(err,student,done){
         if(err){return done(err)}
@@ -199,6 +189,6 @@ app.prepare()
 
   server.listen(process.env.PORT || secret.port, (err) => {
     if (err) throw err
-    console.log('> Ready on http://localhost:3000')
+    console.log('> Ready on http://localhost:' + (process.env.PORT || secret.port))
   })
 })
