@@ -96,6 +96,7 @@ export default class extends React.Component{
                           console.log(element);
                           return(
                             <tr key={element._id}>
+                              <td key={'checkbox' + element._id}><input type='checkbox' /></td>
                               <td key={'rollno' + element._id}>{element.rollNo}</td>
                               <td key={'firstname' + element._id}>{element.fname}</td>
                               <td key={'lastname' + element._id}>{element.lname}</td>
