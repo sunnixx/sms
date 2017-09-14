@@ -118,7 +118,6 @@ export default class extends React.Component{
                               </td>
                             </tr>
                           )
-            
                         })
                       }
                       </tbody>

@@ -12,6 +12,8 @@ const User = require('./models/user')
 const Student = require('./models/student')
 const multer = require('multer')
 const upload = multer({dest: './static/uploads/img/'})
+const morgan = require('morgan')
+const moment = require('moment');
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -40,6 +42,7 @@ app.prepare()
   }))
   server.use(passport.initialize())
   server.use(passport.session())
+  server.use(morgan('dev'));
 
   server.get('/', (req, res) => {
     if(req.user){
