@@ -351,13 +351,15 @@ var _class = function (_React$Component) {
             lineNumber: 122
           }
         }, "Generate Challan")))))));
-      }))), _react2.default.createElement("button", { disabled: this.state.bPrint, onClick: function onClick(e) {
-          return console.log(e);
-        }, className: "btn btn-primary", __source: {
+      }))), _react2.default.createElement(_link2.default, { href: "/generatechallan?rollNo=printall", __source: {
           fileName: _jsxFileName,
           lineNumber: 133
         }
-      }, " Print All ")))))));
+      }, _react2.default.createElement("button", { className: "btn btn-primary", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        }
+      }, " Print All "))))))));
     }
   }]);
 

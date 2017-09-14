@@ -130,7 +130,7 @@ export default class extends React.Component{
                       }
                       </tbody>
                     </table>
-                    <button disabled={this.state.bPrint} onClick={e => console.log(e)} className='btn btn-primary'> Print All </button>
+                    <Link href="/generatechallan?rollNo=printall"><button className='btn btn-primary'> Print All </button></Link>
                   </div>
                 </div>
                 {/* <!-- /basic datatable --> */}

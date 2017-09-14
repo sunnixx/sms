@@ -12,13 +12,18 @@ export default class extends React.Component {
 
     this.getChallanData = this.getChallanData.bind(this);
     this.renderChallanData = this.renderChallanData.bind(this);
+    this.printAllChallan = this.printAllChallan.bind(this);
   }
 
   getChallanData() {
     axios.get("/Send_ChallanData?rollNo=" + this.props.url.query.rollNo).then((response) => {
       this.setState({ data: response.data })
-      console.log(this.props.url.query.rollNo);
     })
+  }
+
+  printAllChallan(){
+    // console.log("PRINT ALL CHALLAN");
+    axios.get("/allstudents").then(res=>this.setState({data:res.data}));
   }
 
   renderChallanData() {
@@ -181,7 +186,11 @@ export default class extends React.Component {
   }
 
   componentDidMount() {
-    this.getChallanData();
+    if(this.props.url.query.rollNo === "printall"){
+      this.printAllChallan();
+    }else{
+      this.getChallanData();
+    }
   }
 
   render() {
