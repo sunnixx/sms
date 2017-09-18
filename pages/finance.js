@@ -11,9 +11,10 @@ import MonthlyAmountChart from "../components/charts/monthlyAmount";
 export default class extends React.Component{
   constructor(props){
     super(props);
-    this.state = {data: []}
+    this.state = {data: [], bPrint: "true"}
 
     this.getAllStudents = this.getAllStudents.bind(this);
+    this.checkMultipleChallan = this.checkMultipleChallan.bind(this);
   }
 
   getAllStudents(){
@@ -21,6 +22,12 @@ export default class extends React.Component{
       this.setState({data:response.data})
       // console.log(this.state.data);
     })
+  }
+
+  checkMultipleChallan(e){
+    if(e.target.value === "on"){
+      this.setState({bPrint:"false"})
+    }
   }
 
   componentDidMount(){
@@ -80,6 +87,7 @@ export default class extends React.Component{
                     <table className="table datatable-basic">
                       <thead>
                         <tr>
+                          <th><input type="checkbox" onClick={this.checkMultipleChallan} />Select</th>
                           <th>Roll No</th>
                           <th>First Name</th>
                           <th>Last Name</th>
@@ -93,9 +101,9 @@ export default class extends React.Component{
                       </thead>
                       <tbody>
                         {this.state.data.map((element)=>{
-                          console.log(element);
                           return(
                             <tr key={element._id}>
+                              <td key={'checkbox' + element._id}><input type='checkbox' onClick={this.checkMultipleChallan} /></td>
                               <td key={'rollno' + element._id}>{element.rollNo}</td>
                               <td key={'firstname' + element._id}>{element.fname}</td>
                               <td key={'lastname' + element._id}>{element.lname}</td>
@@ -122,6 +130,7 @@ export default class extends React.Component{
                       }
                       </tbody>
                     </table>
+                    <Link href="/generatechallan?rollNo=printall"><button className='btn btn-primary'> Print All </button></Link>
                   </div>
                 </div>
                 {/* <!-- /basic datatable --> */}
