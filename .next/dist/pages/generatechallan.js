@@ -80,7 +80,6 @@ var _class = function (_React$Component) {
     value: function printAllChallan() {
       var _this3 = this;
 
-      // console.log("PRINT ALL CHALLAN");
       _axios2.default.get("/allstudents").then(function (res) {
         return _this3.setState({ data: res.data });
       });
@@ -88,1324 +87,1307 @@ var _class = function (_React$Component) {
   }, {
     key: "renderChallanData",
     value: function renderChallanData() {
-      return _react2.default.createElement("main", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        }
-      }, _react2.default.createElement("div", { className: "col-md-4 col-sm-4 col-xs-4", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        }
-      }, _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        }
-      }, _react2.default.createElement("div", { className: "col-md-4 col-sm-2 col-xs-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        }
-      }, _react2.default.createElement("img", { src: "static/assets/images/logo-1.jpg", className: "img-responsive", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        }
-      })), _react2.default.createElement("div", { className: "col-md-6 col-sm-6 col-xs-6", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        }
-      }, _react2.default.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        }
-      }, "Bank Alfalah Limited"), _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        }
-      }, "Islamic Banking"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        }
-      }, "Latifabad Branch Block C"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        }
-      }, "Civic Center Unit No. 7"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        }
-      }), _react2.default.createElement("span", { style: { border: "3px dotted" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44
-        }
-      }, "A/C No 5631-5000622021"))), _react2.default.createElement("div", { className: "col-md-2 col-sm-2 col-xs-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 47
-        }
-      }, _react2.default.createElement("p", { style: { fontSize: "9px" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        }
-      }, "Bank Copy"))), _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        }
-      }), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        }
-      }, _react2.default.createElement("p", { style: { marginBottom: "0" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        }
-      }, _react2.default.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        }
-      }, _react2.default.createElement("u", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        }
-      }, "International Islamic University Islamabad Schools"))), _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        }
-      }, _react2.default.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        }
-      }, "Latifabad Campus")))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        }
-      }, _react2.default.createElement("table", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        }
-      }, this.state.data.map(function (item) {
-        console.log(item);
-        return _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+      return this.state.data.map(function (item) {
+        return _react2.default.createElement("main", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32
+          }
+        }, _react2.default.createElement("div", { className: "col-md-4 col-sm-4 col-xs-4", style: { paddingTop: "10%" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          }
+        }, _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34
+          }
+        }, _react2.default.createElement("div", { className: "col-md-4 col-sm-2 col-xs-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          }
+        }, _react2.default.createElement("img", { src: "static/assets/images/logo-1.jpg", className: "img-responsive", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36
+          }
+        })), _react2.default.createElement("div", { className: "col-md-6 col-sm-6 col-xs-6", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          }
+        }, _react2.default.createElement("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40
+          }
+        }, "Bank Alfalah Limited"), _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          }
+        }, "Islamic Banking"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          }
+        }, "Latifabad Branch Block C"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          }
+        }, "Civic Center Unit No. 7"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          }
+        }), _react2.default.createElement("span", { style: { border: "3px dotted" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          }
+        }, "A/C No 5631-5000622021"))), _react2.default.createElement("div", { className: "col-md-2 col-sm-2 col-xs-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          }
+        }, _react2.default.createElement("p", { style: { fontSize: "9px" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          }
+        }, "Bank Copy"))), _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51
+          }
+        }), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          }
+        }, _react2.default.createElement("p", { style: { marginBottom: "0" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          }
+        }, _react2.default.createElement("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          }
+        }, _react2.default.createElement("u", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          }
+        }, "International Islamic University Islamabad Schools"))), _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          }
+        }, _react2.default.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          }
+        }, "Latifabad Campus")))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59
+          }
+        }, _react2.default.createElement("table", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60
+          }
+        }, _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61
+          }
+        }, _react2.default.createElement("tr", { key: "rollnorow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          }
+        }, _react2.default.createElement("td", { key: "rollnokey" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          }
+        }, "Roll No"), _react2.default.createElement("td", { className: "col-md-6 col-sm-6 col-xs-6", key: "rollnovalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 64
           }
-        }, _react2.default.createElement("tr", { key: "rollnorow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65
-          }
-        }, _react2.default.createElement("td", { key: "rollnokey" + item._id, __source: {
+        }, item.rollNo)), _react2.default.createElement("tr", { key: "feemonthrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 66
           }
-        }, "Roll No"), _react2.default.createElement("td", { className: "col-md-6 col-sm-6 col-xs-6", key: "rollnovalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "feemonthkey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 67
           }
-        }, item.rollNo)), _react2.default.createElement("tr", { key: "feemonthrow" + item._id, __source: {
+        }, "Fee Month"), _react2.default.createElement("td", { key: "feemonthvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 68
           }
-        }, _react2.default.createElement("td", { key: "feemonthkey" + item._id, __source: {
+        }, item.feeMonth)), _react2.default.createElement("tr", { key: "issuedaterow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 70
           }
-        }, "Fee Month"), _react2.default.createElement("td", { key: "feemonthvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "issuedatekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 71
           }
-        }, item.feeMonth)), _react2.default.createElement("tr", { key: "issuedaterow" + item._id, __source: {
+        }, "Issue Date"), _react2.default.createElement("td", { key: "issuedatevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 73
+            lineNumber: 72
           }
-        }, _react2.default.createElement("td", { key: "issuedatekey" + item._id, __source: {
+        }, item.issueDate)), _react2.default.createElement("tr", { key: "duedaterow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 74
           }
-        }, "Issue Date"), _react2.default.createElement("td", { key: "issuedatevalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "duedatekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 75
           }
-        }, item.issueDate)), _react2.default.createElement("tr", { key: "duedaterow" + item._id, __source: {
+        }, "Due Date"), _react2.default.createElement("td", { key: "duedatevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 77
+            lineNumber: 76
           }
-        }, _react2.default.createElement("td", { key: "duedatekey" + item._id, __source: {
+        }, item.dueDate)), _react2.default.createElement("tr", { key: "namerow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 78
           }
-        }, "Due Date"), _react2.default.createElement("td", { key: "duedatevalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "namekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 79
           }
-        }, item.dueDate)), _react2.default.createElement("tr", { key: "namerow" + item._id, __source: {
+        }, "Name"), _react2.default.createElement("td", { key: "namevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 80
           }
-        }, _react2.default.createElement("td", { key: "namekey" + item._id, __source: {
+        }, item.fname)), _react2.default.createElement("tr", { key: "fathernamerow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 82
           }
-        }, "Name"), _react2.default.createElement("td", { key: "namevalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "fathernamekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 83
           }
-        }, item.fname)), _react2.default.createElement("tr", { key: "fathernamerow" + item._id, __source: {
+        }, "Father Name"), _react2.default.createElement("td", { key: "fathernamevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 84
           }
-        }, _react2.default.createElement("td", { key: "fathernamekey" + item._id, __source: {
+        }, item.guardian)), _react2.default.createElement("tr", { key: "graderow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 86
           }
-        }, "Father Name"), _react2.default.createElement("td", { key: "fathernamevalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "gradekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 87
           }
-        }, item.guardian)), _react2.default.createElement("tr", { key: "graderow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 89
-          }
-        }, _react2.default.createElement("td", { key: "gradekey" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 90
-          }
         }, "Grade"), _react2.default.createElement("td", { key: "gradevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 88
           }
-        }, item.grade)));
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 99
-        }
-      }, _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 100
-        }
-      }), _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 101
-        }
-      }, _react2.default.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 101
-        }
-      }, "Challan Details")), _react2.default.createElement("span", { className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102
-        }
-      }, "Description"), _react2.default.createElement("span", { className: "pull-right", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102
-        }
-      }, "Amount"), _react2.default.createElement("div", { className: "col-md-offset-2", style: { borderTop: "2px solid #000" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 103
-        }
-      }, _react2.default.createElement("table", { className: "col-md-12 col-sm-12 col-xs-12", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 104
-        }
-      }, this.state.data.map(function (item) {
-        return _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+        }, item.grade)))))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          }
+        }, _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          }
+        }), _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96
+          }
+        }, _react2.default.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96
+          }
+        }, "Challan Details")), _react2.default.createElement("span", { className: "col-md-offset-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97
+          }
+        }, "Description"), _react2.default.createElement("span", { className: "pull-right", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97
+          }
+        }, "Amount"), _react2.default.createElement("div", { className: "col-md-offset-2", style: { borderTop: "2px solid #000" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98
+          }
+        }, _react2.default.createElement("table", { className: "col-md-12 col-sm-12 col-xs-12", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99
+          }
+        }, _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100
+          }
+        }, _react2.default.createElement("tr", { key: "admissionfeesrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101
+          }
+        }, _react2.default.createElement("td", { key: "admissionfees" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 102
+          }
+        }, "Admission Fee"), _react2.default.createElement("td", { className: "pull-right", key: "admissionfeesvalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103
+          }
+        }, item.admissionFee | 0)), _react2.default.createElement("tr", { key: "annualfeesrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105
+          }
+        }, _react2.default.createElement("td", { key: "annualfees" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 106
+          }
+        }, "Annual Fee"), _react2.default.createElement("td", { className: "pull-right", key: "annualfeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 107
           }
-        }, _react2.default.createElement("tr", { key: "admissionfeesrow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 108
-          }
-        }, _react2.default.createElement("td", { key: "admissionfees" + item._id, __source: {
+        }, item.annualFee | 0)), _react2.default.createElement("tr", { key: "coursefeesrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 109
           }
-        }, "Admission Fee"), _react2.default.createElement("td", { className: "pull-right", key: "admissionfeesvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "coursefees" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 110
           }
-        }, item.admissionFee | 0)), _react2.default.createElement("tr", { key: "annualfeesrow" + item._id, __source: {
+        }, "Course Fee"), _react2.default.createElement("td", { className: "pull-right", key: "coursefeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 112
+            lineNumber: 111
           }
-        }, _react2.default.createElement("td", { key: "annualfees" + item._id, __source: {
+        }, item.course | 0)), _react2.default.createElement("tr", { key: "tuitionfeesrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 113
           }
-        }, "Annual Fee"), _react2.default.createElement("td", { className: "pull-right", key: "annualfeesvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "tuitionfees" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 114
           }
-        }, item.annualFee | 0)), _react2.default.createElement("tr", { key: "coursefeesrow" + item._id, __source: {
+        }, "Tution Fee"), _react2.default.createElement("td", { className: "pull-right", key: "tuitionfeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 116
+            lineNumber: 115
           }
-        }, _react2.default.createElement("td", { key: "coursefees" + item._id, __source: {
+        }, item.course | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 117
           }
-        }, "Course Fee"), _react2.default.createElement("td", { className: "pull-right", key: "coursefeesvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 118
           }
-        }, item.course | 0)), _react2.default.createElement("tr", { key: "tuitionfeesrow" + item._id, __source: {
+        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 120
+            lineNumber: 119
           }
-        }, _react2.default.createElement("td", { key: "tuitionfees" + item._id, __source: {
+        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 121
           }
-        }, "Tution Fee"), _react2.default.createElement("td", { className: "pull-right", key: "tuitionfeesvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 122
           }
-        }, item.course | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
+        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 124
+            lineNumber: 123
           }
-        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
+        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "duplicaterow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 125
           }
-        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "duplicate" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 126
           }
-        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
+        }, "Duplicate"), _react2.default.createElement("td", { className: "pull-right", key: "duplicatevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 128
+            lineNumber: 127
           }
-        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
+        }, item.bDuplicateChallan | 'No')), _react2.default.createElement("tr", { key: "challanfeerow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 129
           }
-        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "challanfee" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 130
           }
-        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "duplicaterow" + item._id, __source: {
+        }, "Challan"), _react2.default.createElement("td", { className: "pull-right", key: "challanfeevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 132
+            lineNumber: 131
           }
-        }, _react2.default.createElement("td", { key: "duplicate" + item._id, __source: {
+        }, item.amount | 0)), _react2.default.createElement("tr", { key: "reminderrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 133
           }
-        }, "Duplicate"), _react2.default.createElement("td", { className: "pull-right", key: "duplicatevalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "reminder" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 134
           }
-        }, item.bDuplicateChallan | 'No')), _react2.default.createElement("tr", { key: "challanfeerow" + item._id, __source: {
+        }, "Reminder"), _react2.default.createElement("td", { className: "pull-right", key: "remindervalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 136
+            lineNumber: 135
           }
-        }, _react2.default.createElement("td", { key: "challanfee" + item._id, __source: {
+        }, item.feeReminders | 0)), _react2.default.createElement("tr", { key: "photocopyrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 137
           }
-        }, "Challan"), _react2.default.createElement("td", { className: "pull-right", key: "challanfeevalue" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "photocopy" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 138
           }
-        }, item.amount | 0)), _react2.default.createElement("tr", { key: "reminderrow" + item._id, __source: {
+        }, "Photocopies"), _react2.default.createElement("td", { className: "pull-right", key: "photocopyvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 140
+            lineNumber: 139
           }
-        }, _react2.default.createElement("td", { key: "reminder" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 141
-          }
-        }, "Reminder"), _react2.default.createElement("td", { className: "pull-right", key: "remindervalue" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 142
-          }
-        }, item.feeReminders | 0)), _react2.default.createElement("tr", { key: "photocopyrow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 144
-          }
-        }, _react2.default.createElement("td", { key: "photocopy" + item._id, __source: {
+        }, item.duplicateChallan | 0)))))), _react2.default.createElement("div", { className: "row", __source: {
             fileName: _jsxFileName,
             lineNumber: 145
           }
-        }, "Photocopies"), _react2.default.createElement("td", { className: "pull-right", key: "photocopyvalue" + item._id, __source: {
+        }, _react2.default.createElement("div", { style: { borderTop: "2px solid #000" }, className: "col-md-offset-2", __source: {
             fileName: _jsxFileName,
             lineNumber: 146
           }
-        }, item.duplicateChallan | 0)));
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 154
-        }
-      }, _react2.default.createElement("div", { style: { borderTop: "2px solid #000" }, className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 155
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 156
-        }
-      }, "Total"), _react2.default.createElement("span", { className: "pull-right", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 157
-        }
-      }, this.state.data.map(function (item) {
-        return item.amount | 0 + item.admissionFee | 0 + item.arrears | 0 + item.annualFee | 0 + item.securityDeposite | 0 + item.course | 0 + item.duplicateChallan | 0;
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 170
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2 col-md-5 col-sm-5 col-xs-5", style: {
-          border: "1px solid #000",
-          height: "100px",
-          paddingTop: "20%"
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 171
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 176
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 176
-        }
-      }, "Stamp"))), _react2.default.createElement("div", { className: "pull-right col-md-3 col-sm-3 col-xs-3", style: { borderBottom: "1px solid #000",
-          height: "80px",
-          paddingTop: "20%" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 178
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 181
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 181
-        }
-      }, "Signature"))))), _react2.default.createElement("div", { className: "col-md-4 col-sm-4 col-xs-4", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 185
-        }
-      }, _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 186
-        }
-      }, _react2.default.createElement("div", { className: "col-md-4 col-sm-2 col-xs-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 187
-        }
-      }, _react2.default.createElement("img", { src: "static/assets/images/logo-1.jpg", className: "img-responsive", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 188
-        }
-      })), _react2.default.createElement("div", { className: "col-md-6 col-sm-6 col-xs-6", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 190
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 191
-        }
-      }, _react2.default.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 192
-        }
-      }, "Bank Alfalah Limited"), _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 192
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 193
-        }
-      }, "Islamic Banking"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 193
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 194
-        }
-      }, "Latifabad Branch Block C"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 194
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 195
-        }
-      }, "Civic Center Unit No. 7"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 195
-        }
-      }), _react2.default.createElement("span", { style: { border: "3px dotted" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 196
-        }
-      }, "A/C No 5631-5000622021"))), _react2.default.createElement("div", { className: "col-md-2 col-sm-2 col-xs-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 199
-        }
-      }, _react2.default.createElement("p", { style: { fontSize: "9px" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 200
-        }
-      }, "Bank Copy"))), _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 203
-        }
-      }), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 204
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 205
-        }
-      }, _react2.default.createElement("p", { style: { marginBottom: "0" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 206
-        }
-      }, _react2.default.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 206
-        }
-      }, _react2.default.createElement("u", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 206
-        }
-      }, "International Islamic University Islamabad Schools"))), _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 207
-        }
-      }, _react2.default.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 207
-        }
-      }, "Latifabad Campus")))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 210
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 211
-        }
-      }, _react2.default.createElement("table", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 212
-        }
-      }, this.state.data.map(function (item) {
-        console.log(item);
-        return _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+        }, _react2.default.createElement("span", {
+          __source: {
             fileName: _jsxFileName,
-            lineNumber: 216
+            lineNumber: 147
+          }
+        }, "Total"), _react2.default.createElement("span", { className: "pull-right", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 148
+          }
+        }, item.amount | 0 + item.admissionFee | 0 + item.arrears | 0 + item.annualFee | 0 + item.securityDeposite | 0 + item.course | 0 + item.duplicateChallan | 0))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 159
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2 col-md-5 col-sm-5 col-xs-5", style: {
+            border: "1px solid #000",
+            height: "100px",
+            paddingTop: "20%"
+          }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 160
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 165
+          }
+        }, _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 165
+          }
+        }, "Stamp"))), _react2.default.createElement("div", { className: "pull-right col-md-3 col-sm-3 col-xs-3", style: {
+            borderBottom: "1px solid #000",
+            height: "80px",
+            paddingTop: "20%"
+          }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 167
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 172
+          }
+        }, _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 172
+          }
+        }, "Signature"))))), _react2.default.createElement("div", { className: "col-md-4 col-sm-4 col-xs-4", style: { paddingTop: "10%" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 176
+          }
+        }, _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 177
+          }
+        }, _react2.default.createElement("div", { className: "col-md-4 col-sm-2 col-xs-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 178
+          }
+        }, _react2.default.createElement("img", { src: "static/assets/images/logo-1.jpg", className: "img-responsive", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 179
+          }
+        })), _react2.default.createElement("div", { className: "col-md-6 col-sm-6 col-xs-6", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 181
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 182
+          }
+        }, _react2.default.createElement("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 183
+          }
+        }, "Bank Alfalah Limited"), _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 183
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 184
+          }
+        }, "Islamic Banking"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 184
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 185
+          }
+        }, "Latifabad Branch Block C"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 185
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 186
+          }
+        }, "Civic Center Unit No. 7"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 186
+          }
+        }), _react2.default.createElement("span", { style: { border: "3px dotted" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 187
+          }
+        }, "A/C No 5631-5000622021"))), _react2.default.createElement("div", { className: "col-md-2 col-sm-2 col-xs-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 190
+          }
+        }, _react2.default.createElement("p", { style: { fontSize: "9px" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 191
+          }
+        }, "Bank Copy"))), _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 194
+          }
+        }), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 195
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 196
+          }
+        }, _react2.default.createElement("p", { style: { marginBottom: "0" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 197
+          }
+        }, _react2.default.createElement("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 197
+          }
+        }, _react2.default.createElement("u", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 197
+          }
+        }, "International Islamic University Islamabad Schools"))), _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 198
+          }
+        }, _react2.default.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 198
+          }
+        }, "Latifabad Campus")))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 201
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 202
+          }
+        }, _react2.default.createElement("table", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 203
+          }
+        }, _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 204
           }
         }, _react2.default.createElement("tr", { key: "rollnorow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 205
+          }
+        }, _react2.default.createElement("td", { key: "rollnokey" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 206
+          }
+        }, "Roll No"), _react2.default.createElement("td", { className: "col-md-6 col-sm-6 col-xs-6", key: "rollnovalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 207
+          }
+        }, item.rollNo)), _react2.default.createElement("tr", { key: "feemonthrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 209
+          }
+        }, _react2.default.createElement("td", { key: "feemonthkey" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 210
+          }
+        }, "Fee Month"), _react2.default.createElement("td", { key: "feemonthvalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 211
+          }
+        }, item.feeMonth)), _react2.default.createElement("tr", { key: "issuedaterow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 213
+          }
+        }, _react2.default.createElement("td", { key: "issuedatekey" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 214
+          }
+        }, "Issue Date"), _react2.default.createElement("td", { key: "issuedatevalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 215
+          }
+        }, item.issueDate)), _react2.default.createElement("tr", { key: "duedaterow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 217
           }
-        }, _react2.default.createElement("td", { key: "rollnokey" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "duedatekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 218
           }
-        }, "Roll No"), _react2.default.createElement("td", { className: "col-md-6 col-sm-6 col-xs-6", key: "rollnovalue" + item._id, __source: {
+        }, "Due Date"), _react2.default.createElement("td", { key: "duedatevalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 219
           }
-        }, item.rollNo)), _react2.default.createElement("tr", { key: "feemonthrow" + item._id, __source: {
+        }, item.dueDate)), _react2.default.createElement("tr", { key: "namerow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 221
           }
-        }, _react2.default.createElement("td", { key: "feemonthkey" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "namekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 222
           }
-        }, "Fee Month"), _react2.default.createElement("td", { key: "feemonthvalue" + item._id, __source: {
+        }, "Name"), _react2.default.createElement("td", { key: "namevalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 223
           }
-        }, item.feeMonth)), _react2.default.createElement("tr", { key: "issuedaterow" + item._id, __source: {
+        }, item.fname)), _react2.default.createElement("tr", { key: "fathernamerow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 225
           }
-        }, _react2.default.createElement("td", { key: "issuedatekey" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "fathernamekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 226
           }
-        }, "Issue Date"), _react2.default.createElement("td", { key: "issuedatevalue" + item._id, __source: {
+        }, "Father Name"), _react2.default.createElement("td", { key: "fathernamevalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 227
           }
-        }, item.issueDate)), _react2.default.createElement("tr", { key: "duedaterow" + item._id, __source: {
+        }, item.guardian)), _react2.default.createElement("tr", { key: "graderow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 229
           }
-        }, _react2.default.createElement("td", { key: "duedatekey" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "gradekey" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 230
           }
-        }, "Due Date"), _react2.default.createElement("td", { key: "duedatevalue" + item._id, __source: {
+        }, "Grade"), _react2.default.createElement("td", { key: "gradevalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 231
           }
-        }, item.dueDate)), _react2.default.createElement("tr", { key: "namerow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 233
-          }
-        }, _react2.default.createElement("td", { key: "namekey" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 234
-          }
-        }, "Name"), _react2.default.createElement("td", { key: "namevalue" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 235
-          }
-        }, item.fname)), _react2.default.createElement("tr", { key: "fathernamerow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 237
-          }
-        }, _react2.default.createElement("td", { key: "fathernamekey" + item._id, __source: {
+        }, item.grade)))))), _react2.default.createElement("div", { className: "row", __source: {
             fileName: _jsxFileName,
             lineNumber: 238
           }
-        }, "Father Name"), _react2.default.createElement("td", { key: "fathernamevalue" + item._id, __source: {
+        }, _react2.default.createElement("br", {
+          __source: {
             fileName: _jsxFileName,
             lineNumber: 239
           }
-        }, item.guardian)), _react2.default.createElement("tr", { key: "graderow" + item._id, __source: {
+        }), _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 240
+          }
+        }, _react2.default.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 240
+          }
+        }, "Challan Details")), _react2.default.createElement("span", { className: "col-md-offset-2", __source: {
             fileName: _jsxFileName,
             lineNumber: 241
           }
-        }, _react2.default.createElement("td", { key: "gradekey" + item._id, __source: {
+        }, "Description"), _react2.default.createElement("span", { className: "pull-right", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 241
+          }
+        }, "Amount"), _react2.default.createElement("div", { className: "col-md-offset-2", style: { borderTop: "2px solid #000" }, __source: {
             fileName: _jsxFileName,
             lineNumber: 242
           }
-        }, "Grade"), _react2.default.createElement("td", { key: "gradevalue" + item._id, __source: {
+        }, _react2.default.createElement("table", { className: "col-md-12 col-sm-12 col-xs-12", __source: {
             fileName: _jsxFileName,
             lineNumber: 243
           }
-        }, item.grade)));
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 251
-        }
-      }, _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 252
-        }
-      }), _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 253
-        }
-      }, _react2.default.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 253
-        }
-      }, "Challan Details")), _react2.default.createElement("span", { className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 254
-        }
-      }, "Description"), _react2.default.createElement("span", { className: "pull-right", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 254
-        }
-      }, "Amount"), _react2.default.createElement("div", { className: "col-md-offset-2", style: { borderTop: "2px solid #000" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 255
-        }
-      }, _react2.default.createElement("table", { className: "col-md-12 col-sm-12 col-xs-12", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 256
-        }
-      }, this.state.data.map(function (item) {
-        return _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+        }, _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 245
+          }
+        }, _react2.default.createElement("tr", { key: "admissionfeesrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 246
+          }
+        }, _react2.default.createElement("td", { key: "admissionfees" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 247
+          }
+        }, "Admission Fee"), _react2.default.createElement("td", { className: "pull-right", key: "admissionfeesvalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 248
+          }
+        }, item.admissionFee | 0)), _react2.default.createElement("tr", { key: "annualfeesrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 250
+          }
+        }, _react2.default.createElement("td", { key: "annualfees" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 251
+          }
+        }, "Annual Fee"), _react2.default.createElement("td", { className: "pull-right", key: "annualfeesvalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 252
+          }
+        }, item.annualFee | 0)), _react2.default.createElement("tr", { key: "coursefeesrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 254
+          }
+        }, _react2.default.createElement("td", { key: "coursefees" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 255
+          }
+        }, "Course Fee"), _react2.default.createElement("td", { className: "pull-right", key: "coursefeesvalue" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 256
+          }
+        }, item.course | 0)), _react2.default.createElement("tr", { key: "tuitionfeesrow" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 258
+          }
+        }, _react2.default.createElement("td", { key: "tuitionfees" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 259
           }
-        }, _react2.default.createElement("tr", { key: "admissionfeesrow" + item._id, __source: {
+        }, "Tution Fee"), _react2.default.createElement("td", { className: "pull-right", key: "tuitionfeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 260
           }
-        }, _react2.default.createElement("td", { key: "admissionfees" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 261
-          }
-        }, "Admission Fee"), _react2.default.createElement("td", { className: "pull-right", key: "admissionfeesvalue" + item._id, __source: {
+        }, item.course | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 262
           }
-        }, item.admissionFee | 0)), _react2.default.createElement("tr", { key: "annualfeesrow" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 263
+          }
+        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 264
           }
-        }, _react2.default.createElement("td", { key: "annualfees" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 265
-          }
-        }, "Annual Fee"), _react2.default.createElement("td", { className: "pull-right", key: "annualfeesvalue" + item._id, __source: {
+        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 266
           }
-        }, item.annualFee | 0)), _react2.default.createElement("tr", { key: "coursefeesrow" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 267
+          }
+        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 268
           }
-        }, _react2.default.createElement("td", { key: "coursefees" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 269
-          }
-        }, "Course Fee"), _react2.default.createElement("td", { className: "pull-right", key: "coursefeesvalue" + item._id, __source: {
+        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "duplicaterow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 270
           }
-        }, item.course | 0)), _react2.default.createElement("tr", { key: "tuitionfeesrow" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "duplicate" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 271
+          }
+        }, "Duplicate"), _react2.default.createElement("td", { className: "pull-right", key: "duplicatevalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 272
           }
-        }, _react2.default.createElement("td", { key: "tuitionfees" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 273
-          }
-        }, "Tution Fee"), _react2.default.createElement("td", { className: "pull-right", key: "tuitionfeesvalue" + item._id, __source: {
+        }, item.bDuplicateChallan | 'No')), _react2.default.createElement("tr", { key: "challanfeerow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 274
           }
-        }, item.course | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "challanfee" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 275
+          }
+        }, "Challan"), _react2.default.createElement("td", { className: "pull-right", key: "challanfeevalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 276
           }
-        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 277
-          }
-        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
+        }, item.amount | 0)), _react2.default.createElement("tr", { key: "reminderrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 278
           }
-        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "reminder" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 279
+          }
+        }, "Reminder"), _react2.default.createElement("td", { className: "pull-right", key: "remindervalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 280
           }
-        }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 281
-          }
-        }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
+        }, item.feeReminders | 0)), _react2.default.createElement("tr", { key: "photocopyrow" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 282
           }
-        }, item.arrears | 0)), _react2.default.createElement("tr", { key: "duplicaterow" + item._id, __source: {
+        }, _react2.default.createElement("td", { key: "photocopy" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 283
+          }
+        }, "Photocopies"), _react2.default.createElement("td", { className: "pull-right", key: "photocopyvalue" + item._id, __source: {
             fileName: _jsxFileName,
             lineNumber: 284
           }
-        }, _react2.default.createElement("td", { key: "duplicate" + item._id, __source: {
+        }, item.duplicateChallan | 0)))))), _react2.default.createElement("div", { className: "row", __source: {
             fileName: _jsxFileName,
-            lineNumber: 285
+            lineNumber: 291
           }
-        }, "Duplicate"), _react2.default.createElement("td", { className: "pull-right", key: "duplicatevalue" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 286
-          }
-        }, item.bDuplicateChallan | 'No')), _react2.default.createElement("tr", { key: "challanfeerow" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 288
-          }
-        }, _react2.default.createElement("td", { key: "challanfee" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 289
-          }
-        }, "Challan"), _react2.default.createElement("td", { className: "pull-right", key: "challanfeevalue" + item._id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 290
-          }
-        }, item.amount | 0)), _react2.default.createElement("tr", { key: "reminderrow" + item._id, __source: {
+        }, _react2.default.createElement("div", { style: { borderTop: "2px solid #000" }, className: "col-md-offset-2", __source: {
             fileName: _jsxFileName,
             lineNumber: 292
           }
-        }, _react2.default.createElement("td", { key: "reminder" + item._id, __source: {
+        }, _react2.default.createElement("span", {
+          __source: {
             fileName: _jsxFileName,
             lineNumber: 293
           }
-        }, "Reminder"), _react2.default.createElement("td", { className: "pull-right", key: "remindervalue" + item._id, __source: {
+        }, "Total"), _react2.default.createElement("span", { className: "pull-right", __source: {
             fileName: _jsxFileName,
             lineNumber: 294
           }
-        }, item.feeReminders | 0)), _react2.default.createElement("tr", { key: "photocopyrow" + item._id, __source: {
+        }, item.amount | 0 + item.admissionFee | 0 + item.arrears | 0 + item.annualFee | 0 + item.securityDeposite | 0 + item.course | 0 + item.duplicateChallan | 0))), _react2.default.createElement("div", { className: "row", __source: {
             fileName: _jsxFileName,
-            lineNumber: 296
+            lineNumber: 306
           }
-        }, _react2.default.createElement("td", { key: "photocopy" + item._id, __source: {
+        }, _react2.default.createElement("div", { className: "col-md-offset-2 col-md-5 col-sm-5 col-xs-5", style: {
+            border: "1px solid #000",
+            height: "100px",
+            paddingTop: "20%"
+          }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 297
+            lineNumber: 307
           }
-        }, "Photocopies"), _react2.default.createElement("td", { className: "pull-right", key: "photocopyvalue" + item._id, __source: {
+        }, _react2.default.createElement("center", {
+          __source: {
             fileName: _jsxFileName,
-            lineNumber: 298
+            lineNumber: 312
           }
-        }, item.duplicateChallan | 0)));
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 306
-        }
-      }, _react2.default.createElement("div", { style: { borderTop: "2px solid #000" }, className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 307
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 308
-        }
-      }, "Total"), _react2.default.createElement("span", { className: "pull-right", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 309
-        }
-      }, this.state.data.map(function (item) {
-        return item.amount | 0 + item.admissionFee | 0 + item.arrears | 0 + item.annualFee | 0 + item.securityDeposite | 0 + item.course | 0 + item.duplicateChallan | 0;
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 322
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2 col-md-5 col-sm-5 col-xs-5", style: {
-          border: "1px solid #000",
-          height: "100px",
-          paddingTop: "20%"
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 323
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 328
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 328
-        }
-      }, "Stamp"))), _react2.default.createElement("div", { className: "pull-right col-md-3 col-sm-3 col-xs-3", style: {
-          borderBottom: "1px solid #000",
-          height: "80px",
-          paddingTop: "20%"
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 330
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 335
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 335
-        }
-      }, "Signature"))))), _react2.default.createElement("div", { className: "col-md-4 col-sm-4 col-xs-4", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 339
-        }
-      }, _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 340
-        }
-      }, _react2.default.createElement("div", { className: "col-md-4 col-sm-2 col-xs-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 341
-        }
-      }, _react2.default.createElement("img", { src: "static/assets/images/logo-1.jpg", className: "img-responsive", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 342
-        }
-      })), _react2.default.createElement("div", { className: "col-md-6 col-sm-6 col-xs-6", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 344
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 345
-        }
-      }, _react2.default.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 346
-        }
-      }, "Bank Alfalah Limited"), _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 346
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 347
-        }
-      }, "Islamic Banking"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 347
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 348
-        }
-      }, "Latifabad Branch Block C"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 348
-        }
-      }), _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 349
-        }
-      }, "Civic Center Unit No. 7"), " ", _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 349
-        }
-      }), _react2.default.createElement("span", { style: { border: "3px dotted" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 350
-        }
-      }, "A/C No 5631-5000622021"))), _react2.default.createElement("div", { className: "col-md-2 col-sm-2 col-xs-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 353
-        }
-      }, _react2.default.createElement("p", { style: { fontSize: "9px" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 354
-        }
-      }, "Bank Copy"))), _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 357
-        }
-      }), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 358
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 359
-        }
-      }, _react2.default.createElement("p", { style: { marginBottom: "0" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 360
-        }
-      }, _react2.default.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 360
-        }
-      }, _react2.default.createElement("u", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 360
-        }
-      }, "International Islamic University Islamabad Schools"))), _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 361
-        }
-      }, _react2.default.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 361
-        }
-      }, "Latifabad Campus")))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 364
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 365
-        }
-      }, _react2.default.createElement("table", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 366
-        }
-      }, this.state.data.map(function (item) {
-        console.log(item);
-        return _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+        }, _react2.default.createElement("span", {
+          __source: {
             fileName: _jsxFileName,
-            lineNumber: 370
+            lineNumber: 312
+          }
+        }, "Stamp"))), _react2.default.createElement("div", { className: "pull-right col-md-3 col-sm-3 col-xs-3", style: {
+            borderBottom: "1px solid #000",
+            height: "80px",
+            paddingTop: "20%"
+          }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 314
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 319
+          }
+        }, _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 319
+          }
+        }, "Signature"))))), _react2.default.createElement("div", { className: "col-md-4 col-sm-4 col-xs-4", style: { paddingTop: "10%" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 323
+          }
+        }, _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 324
+          }
+        }, _react2.default.createElement("div", { className: "col-md-4 col-sm-2 col-xs-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 325
+          }
+        }, _react2.default.createElement("img", { src: "static/assets/images/logo-1.jpg", className: "img-responsive", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 326
+          }
+        })), _react2.default.createElement("div", { className: "col-md-6 col-sm-6 col-xs-6", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 328
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 329
+          }
+        }, _react2.default.createElement("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 330
+          }
+        }, "Bank Alfalah Limited"), _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 330
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 331
+          }
+        }, "Islamic Banking"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 331
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 332
+          }
+        }, "Latifabad Branch Block C"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 332
+          }
+        }), _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 333
+          }
+        }, "Civic Center Unit No. 7"), " ", _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 333
+          }
+        }), _react2.default.createElement("span", { style: { border: "3px dotted" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 334
+          }
+        }, "A/C No 5631-5000622021"))), _react2.default.createElement("div", { className: "col-md-2 col-sm-2 col-xs-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 337
+          }
+        }, _react2.default.createElement("p", { style: { fontSize: "9px" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 338
+          }
+        }, "Bank Copy"))), _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 341
+          }
+        }), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 342
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2 col-sm-offset-2 col-md-10 col-sm-10 col-xs-10", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 343
+          }
+        }, _react2.default.createElement("p", { style: { marginBottom: "0" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 344
+          }
+        }, _react2.default.createElement("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 344
+          }
+        }, _react2.default.createElement("u", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 344
+          }
+        }, "International Islamic University Islamabad Schools"))), _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 345
+          }
+        }, _react2.default.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 345
+          }
+        }, "Latifabad Campus")))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 348
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 349
+          }
+        }, _react2.default.createElement("table", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 350
+          }
+        }, _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 352
           }
         }, _react2.default.createElement("tr", { key: "rollnorow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 371
+            lineNumber: 353
           }
         }, _react2.default.createElement("td", { key: "rollnokey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 372
+            lineNumber: 354
           }
         }, "Roll No"), _react2.default.createElement("td", { className: "col-md-6 col-sm-6 col-xs-6", key: "rollnovalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 373
+            lineNumber: 355
           }
         }, item.rollNo)), _react2.default.createElement("tr", { key: "feemonthrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 375
+            lineNumber: 357
           }
         }, _react2.default.createElement("td", { key: "feemonthkey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 376
+            lineNumber: 358
           }
         }, "Fee Month"), _react2.default.createElement("td", { key: "feemonthvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 377
+            lineNumber: 359
           }
         }, item.feeMonth)), _react2.default.createElement("tr", { key: "issuedaterow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 379
+            lineNumber: 361
           }
         }, _react2.default.createElement("td", { key: "issuedatekey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 380
+            lineNumber: 362
           }
         }, "Issue Date"), _react2.default.createElement("td", { key: "issuedatevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 381
+            lineNumber: 363
           }
         }, item.issueDate)), _react2.default.createElement("tr", { key: "duedaterow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 383
+            lineNumber: 365
           }
         }, _react2.default.createElement("td", { key: "duedatekey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 384
+            lineNumber: 366
           }
         }, "Due Date"), _react2.default.createElement("td", { key: "duedatevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 385
+            lineNumber: 367
           }
         }, item.dueDate)), _react2.default.createElement("tr", { key: "namerow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 387
+            lineNumber: 369
           }
         }, _react2.default.createElement("td", { key: "namekey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 388
+            lineNumber: 370
           }
         }, "Name"), _react2.default.createElement("td", { key: "namevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 389
+            lineNumber: 371
           }
         }, item.fname)), _react2.default.createElement("tr", { key: "fathernamerow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 391
+            lineNumber: 373
           }
         }, _react2.default.createElement("td", { key: "fathernamekey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 392
+            lineNumber: 374
           }
         }, "Father Name"), _react2.default.createElement("td", { key: "fathernamevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 393
+            lineNumber: 375
           }
         }, item.guardian)), _react2.default.createElement("tr", { key: "graderow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 395
+            lineNumber: 377
           }
         }, _react2.default.createElement("td", { key: "gradekey" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 396
+            lineNumber: 378
           }
         }, "Grade"), _react2.default.createElement("td", { key: "gradevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 397
+            lineNumber: 379
           }
-        }, item.grade)));
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 405
-        }
-      }, _react2.default.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 406
-        }
-      }), _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 407
-        }
-      }, _react2.default.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 407
-        }
-      }, "Challan Details")), _react2.default.createElement("span", { className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 408
-        }
-      }, "Description"), _react2.default.createElement("span", { className: "pull-right", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 408
-        }
-      }, "Amount"), _react2.default.createElement("div", { className: "col-md-offset-2", style: { borderTop: "2px solid #000" }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 409
-        }
-      }, _react2.default.createElement("table", { className: "col-md-12 col-sm-12 col-xs-12", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 410
-        }
-      }, this.state.data.map(function (item) {
-        return _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+        }, item.grade)))))), _react2.default.createElement("div", { className: "row", __source: {
             fileName: _jsxFileName,
-            lineNumber: 413
+            lineNumber: 386
+          }
+        }, _react2.default.createElement("br", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 387
+          }
+        }), _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 388
+          }
+        }, _react2.default.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 388
+          }
+        }, "Challan Details")), _react2.default.createElement("span", { className: "col-md-offset-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 389
+          }
+        }, "Description"), _react2.default.createElement("span", { className: "pull-right", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 389
+          }
+        }, "Amount"), _react2.default.createElement("div", { className: "col-md-offset-2", style: { borderTop: "2px solid #000" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 390
+          }
+        }, _react2.default.createElement("table", { className: "col-md-12 col-sm-12 col-xs-12", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 391
+          }
+        }, _react2.default.createElement("tbody", { key: "tablebody" + item._id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 393
           }
         }, _react2.default.createElement("tr", { key: "admissionfeesrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 414
+            lineNumber: 394
           }
         }, _react2.default.createElement("td", { key: "admissionfees" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 415
+            lineNumber: 395
           }
         }, "Admission Fee"), _react2.default.createElement("td", { className: "pull-right", key: "admissionfeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 416
+            lineNumber: 396
           }
         }, item.admissionFee | 0)), _react2.default.createElement("tr", { key: "annualfeesrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 418
+            lineNumber: 398
           }
         }, _react2.default.createElement("td", { key: "annualfees" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 419
+            lineNumber: 399
           }
         }, "Annual Fee"), _react2.default.createElement("td", { className: "pull-right", key: "annualfeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 420
+            lineNumber: 400
           }
         }, item.annualFee | 0)), _react2.default.createElement("tr", { key: "coursefeesrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 422
+            lineNumber: 402
           }
         }, _react2.default.createElement("td", { key: "coursefees" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 423
+            lineNumber: 403
           }
         }, "Course Fee"), _react2.default.createElement("td", { className: "pull-right", key: "coursefeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 424
+            lineNumber: 404
           }
         }, item.course | 0)), _react2.default.createElement("tr", { key: "tuitionfeesrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 426
+            lineNumber: 406
           }
         }, _react2.default.createElement("td", { key: "tuitionfees" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 427
+            lineNumber: 407
           }
         }, "Tution Fee"), _react2.default.createElement("td", { className: "pull-right", key: "tuitionfeesvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 428
+            lineNumber: 408
           }
         }, item.course | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 430
+            lineNumber: 410
           }
         }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 431
+            lineNumber: 411
           }
         }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 432
+            lineNumber: 412
           }
         }, item.arrears | 0)), _react2.default.createElement("tr", { key: "arrrearsrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 434
+            lineNumber: 414
           }
         }, _react2.default.createElement("td", { key: "arrears" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 435
+            lineNumber: 415
           }
         }, "Arrears"), _react2.default.createElement("td", { className: "pull-right", key: "arrearsvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 436
+            lineNumber: 416
           }
         }, item.arrears | 0)), _react2.default.createElement("tr", { key: "duplicaterow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 438
+            lineNumber: 418
           }
         }, _react2.default.createElement("td", { key: "duplicate" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 439
+            lineNumber: 419
           }
         }, "Duplicate"), _react2.default.createElement("td", { className: "pull-right", key: "duplicatevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 440
+            lineNumber: 420
           }
         }, item.bDuplicateChallan | 'No')), _react2.default.createElement("tr", { key: "challanfeerow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 442
+            lineNumber: 422
           }
         }, _react2.default.createElement("td", { key: "challanfee" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 443
+            lineNumber: 423
           }
         }, "Challan"), _react2.default.createElement("td", { className: "pull-right", key: "challanfeevalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 444
+            lineNumber: 424
           }
         }, item.amount | 0)), _react2.default.createElement("tr", { key: "reminderrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 446
+            lineNumber: 426
           }
         }, _react2.default.createElement("td", { key: "reminder" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 447
+            lineNumber: 427
           }
         }, "Reminder"), _react2.default.createElement("td", { className: "pull-right", key: "remindervalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 448
+            lineNumber: 428
           }
         }, item.feeReminders | 0)), _react2.default.createElement("tr", { key: "photocopyrow" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 450
+            lineNumber: 430
           }
         }, _react2.default.createElement("td", { key: "photocopy" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 451
+            lineNumber: 431
           }
         }, "Photocopies"), _react2.default.createElement("td", { className: "pull-right", key: "photocopyvalue" + item._id, __source: {
             fileName: _jsxFileName,
-            lineNumber: 452
+            lineNumber: 432
           }
-        }, item.duplicateChallan | 0)));
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 460
-        }
-      }, _react2.default.createElement("div", { style: { borderTop: "2px solid #000" }, className: "col-md-offset-2", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 461
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 462
-        }
-      }, "Total"), _react2.default.createElement("span", { className: "pull-right", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 463
-        }
-      }, this.state.data.map(function (item) {
-        return item.amount | 0 + item.admissionFee | 0 + item.arrears | 0 + item.annualFee | 0 + item.securityDeposite | 0 + item.course | 0 + item.duplicateChallan | 0;
-      })))), _react2.default.createElement("div", { className: "row", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 476
-        }
-      }, _react2.default.createElement("div", { className: "col-md-offset-2 col-md-5 col-sm-5 col-xs-5", style: {
-          border: "1px solid #000",
-          height: "100px",
-          paddingTop: "20%"
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 477
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 482
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 482
-        }
-      }, "Stamp"))), _react2.default.createElement("div", { className: "pull-right col-md-3 col-sm-3 col-xs-3", style: {
-          borderBottom: "1px solid #000",
-          height: "80px",
-          paddingTop: "20%"
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 484
-        }
-      }, _react2.default.createElement("center", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 489
-        }
-      }, _react2.default.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 489
-        }
-      }, "Signature"))))));
+        }, item.duplicateChallan | 0)))))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 439
+          }
+        }, _react2.default.createElement("div", { style: { borderTop: "2px solid #000" }, className: "col-md-offset-2", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 440
+          }
+        }, _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 441
+          }
+        }, "Total"), _react2.default.createElement("span", { className: "pull-right", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 442
+          }
+        }, item.amount | 0 + item.admissionFee | 0 + item.arrears | 0 + item.annualFee | 0 + item.securityDeposite | 0 + item.course | 0 + item.duplicateChallan | 0))), _react2.default.createElement("div", { className: "row", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 454
+          }
+        }, _react2.default.createElement("div", { className: "col-md-offset-2 col-md-5 col-sm-5 col-xs-5", style: {
+            border: "1px solid #000",
+            height: "100px",
+            paddingTop: "20%"
+          }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 455
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 460
+          }
+        }, _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 460
+          }
+        }, "Stamp"))), _react2.default.createElement("div", { className: "pull-right col-md-3 col-sm-3 col-xs-3", style: {
+            borderBottom: "1px solid #000",
+            height: "80px",
+            paddingTop: "20%"
+          }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 462
+          }
+        }, _react2.default.createElement("center", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 467
+          }
+        }, _react2.default.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 467
+          }
+        }, "Signature"))))));
+      });
     }
   }, {
     key: "componentDidMount",
@@ -1422,24 +1404,24 @@ var _class = function (_React$Component) {
       return _react2.default.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 507
+          lineNumber: 486
         }
       }, _react2.default.createElement(_Head2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 508
+          lineNumber: 487
         }
       }), _react2.default.createElement("div", { className: "col-md-12 col-sm-12 col-xs-12", style: { backgroundColor: "#fff" }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 509
+          lineNumber: 488
         }
       }, _react2.default.createElement("div", { className: "container", __source: {
           fileName: _jsxFileName,
-          lineNumber: 510
+          lineNumber: 489
         }
       }, _react2.default.createElement("div", { className: "row", __source: {
           fileName: _jsxFileName,
-          lineNumber: 511
+          lineNumber: 490
         }
       }, this.renderChallanData()))));
     }
