@@ -25,9 +25,7 @@ export default class extends React.Component{
   }
 
   checkMultipleChallan(e){
-    if(e.target.value === "on"){
-      this.setState({bPrint:"false"})
-    }
+    console.log(this.state.data);
   }
 
   componentDidMount(){
